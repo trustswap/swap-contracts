@@ -1,0 +1,1461 @@
+{
+  "contracts": {
+    "SwapToken": {
+      "address": "0x907c6d5Bf04DC6f2cC34cEb649AdB18BF356EEbe",
+      "constructorCode": "608060405234801561001057600080fd5b50612539806100206000396000f3fe",
+      "bodyBytecodeHash": "713861e872d866973714a066e9ffa7c541f6101c757ca60bbc11298e75f53939",
+      "localBytecodeHash": "caef1cbae77f6e52e3e39405b4d0d0e5aa7ea43c6763743cfded7265ead86241",
+      "deployedBytecodeHash": "caef1cbae77f6e52e3e39405b4d0d0e5aa7ea43c6763743cfded7265ead86241",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_array:50<t_uint256>": {
+          "id": "t_array:50<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "50",
+          "kind": "array",
+          "label": "uint256[50]"
+        },
+        "t_struct<AccessControlUpgradeSafe.RoleData>": {
+          "id": "t_struct<AccessControlUpgradeSafe.RoleData>",
+          "kind": "struct",
+          "label": "AccessControlUpgradeSafe.RoleData",
+          "members": [
+            {
+              "label": "members",
+              "astId": 5755,
+              "type": "t_struct<EnumerableSet.AddressSet>",
+              "src": "1655:32:10"
+            },
+            {
+              "label": "adminRole",
+              "astId": 5757,
+              "type": "t_bytes32",
+              "src": "1697:17:10"
+            }
+          ]
+        },
+        "t_struct<EnumerableSet.AddressSet>": {
+          "id": "t_struct<EnumerableSet.AddressSet>",
+          "kind": "struct",
+          "label": "EnumerableSet.AddressSet",
+          "members": [
+            {
+              "label": "_inner",
+              "astId": 7656,
+              "type": "t_struct<EnumerableSet.Set>",
+              "src": "4644:10:21"
+            }
+          ]
+        },
+        "t_struct<EnumerableSet.Set>": {
+          "id": "t_struct<EnumerableSet.Set>",
+          "kind": "struct",
+          "label": "EnumerableSet.Set",
+          "members": [
+            {
+              "label": "_values",
+              "astId": 7477,
+              "type": "t_array:dyn<t_bytes32>",
+              "src": "1213:17:21"
+            },
+            {
+              "label": "_indexes",
+              "astId": 7481,
+              "type": "t_mapping<t_uint256>",
+              "src": "1364:37:21"
+            }
+          ]
+        },
+        "t_bytes32": {
+          "id": "t_bytes32",
+          "kind": "elementary",
+          "label": "bytes32"
+        },
+        "t_array:dyn<t_bytes32>": {
+          "id": "t_array:dyn<t_bytes32>",
+          "valueType": "t_bytes32",
+          "length": "dyn",
+          "kind": "array",
+          "label": "bytes32[]"
+        },
+        "t_mapping<t_uint256>": {
+          "id": "t_mapping<t_uint256>",
+          "valueType": "t_uint256",
+          "label": "mapping(key => uint256)",
+          "kind": "mapping"
+        },
+        "t_mapping<t_struct<AccessControlUpgradeSafe.RoleData>>": {
+          "id": "t_mapping<t_struct<AccessControlUpgradeSafe.RoleData>>",
+          "valueType": "t_struct<AccessControlUpgradeSafe.RoleData>",
+          "label": "mapping(key => AccessControlUpgradeSafe.RoleData)",
+          "kind": "mapping"
+        },
+        "t_array:49<t_uint256>": {
+          "id": "t_array:49<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "49",
+          "kind": "array",
+          "label": "uint256[49]"
+        },
+        "t_string": {
+          "id": "t_string",
+          "kind": "elementary",
+          "label": "string"
+        },
+        "t_uint8": {
+          "id": "t_uint8",
+          "kind": "elementary",
+          "label": "uint8"
+        },
+        "t_array:44<t_uint256>": {
+          "id": "t_array:44<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "44",
+          "kind": "array",
+          "label": "uint256[44]"
+        },
+        "t_mapping<t_bool>": {
+          "id": "t_mapping<t_bool>",
+          "valueType": "t_bool",
+          "label": "mapping(key => bool)",
+          "kind": "mapping"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol",
+          "label": "initialized",
+          "astId": 5653,
+          "type": "t_bool",
+          "src": "757:24:9"
+        },
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol",
+          "label": "initializing",
+          "astId": 5655,
+          "type": "t_bool",
+          "src": "876:25:9"
+        },
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol",
+          "label": "______gap",
+          "astId": 5718,
+          "type": "t_array:50<t_uint256>",
+          "src": "1982:29:9"
+        },
+        {
+          "contract": "ContextUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol",
+          "label": "__gap",
+          "astId": 5648,
+          "type": "t_array:50<t_uint256>",
+          "src": "1277:25:8"
+        },
+        {
+          "contract": "AccessControlUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/access/AccessControl.sol",
+          "label": "_roles",
+          "astId": 5762,
+          "type": "t_mapping<t_struct<AccessControlUpgradeSafe.RoleData>>",
+          "src": "1727:44:10"
+        },
+        {
+          "contract": "AccessControlUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/access/AccessControl.sol",
+          "label": "__gap",
+          "astId": 5996,
+          "type": "t_array:49<t_uint256>",
+          "src": "6927:25:10"
+        },
+        {
+          "contract": "ERC20UpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol",
+          "label": "_balances",
+          "astId": 6400,
+          "type": "t_mapping<t_uint256>",
+          "src": "1481:46:14"
+        },
+        {
+          "contract": "ERC20UpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol",
+          "label": "_allowances",
+          "astId": 6406,
+          "type": "t_mapping<t_uint256>",
+          "src": "1534:69:14"
+        },
+        {
+          "contract": "ERC20UpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol",
+          "label": "_totalSupply",
+          "astId": 6408,
+          "type": "t_uint256",
+          "src": "1610:28:14"
+        },
+        {
+          "contract": "ERC20UpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol",
+          "label": "_name",
+          "astId": 6410,
+          "type": "t_string",
+          "src": "1645:20:14"
+        },
+        {
+          "contract": "ERC20UpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol",
+          "label": "_symbol",
+          "astId": 6412,
+          "type": "t_string",
+          "src": "1671:22:14"
+        },
+        {
+          "contract": "ERC20UpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol",
+          "label": "_decimals",
+          "astId": 6414,
+          "type": "t_uint8",
+          "src": "1699:23:14"
+        },
+        {
+          "contract": "ERC20UpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol",
+          "label": "__gap",
+          "astId": 6891,
+          "type": "t_array:44<t_uint256>",
+          "src": "11045:25:14"
+        },
+        {
+          "contract": "ERC20BurnableUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Burnable.sol",
+          "label": "__gap",
+          "astId": 6969,
+          "type": "t_array:50<t_uint256>",
+          "src": "1443:25:15"
+        },
+        {
+          "contract": "PausableUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol",
+          "label": "_paused",
+          "astId": 7869,
+          "type": "t_bool",
+          "src": "825:20:22"
+        },
+        {
+          "contract": "PausableUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol",
+          "label": "__gap",
+          "astId": 7952,
+          "type": "t_array:49<t_uint256>",
+          "src": "2073:25:22"
+        },
+        {
+          "contract": "ERC20PausableUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Pausable.sol",
+          "label": "__gap",
+          "astId": 7032,
+          "type": "t_array:50<t_uint256>",
+          "src": "1130:25:16"
+        },
+        {
+          "contract": "SwapToken",
+          "path": "contracts/SwapToken.sol",
+          "label": "__gap",
+          "astId": 5476,
+          "type": "t_array:50<t_uint256>",
+          "src": "3944:25:7"
+        },
+        {
+          "contract": "SwapToken",
+          "path": "contracts/SwapToken.sol",
+          "label": "blacklisted",
+          "astId": 5480,
+          "type": "t_mapping<t_bool>",
+          "src": "3995:45:7"
+        },
+        {
+          "contract": "SwapToken",
+          "path": "contracts/SwapToken.sol",
+          "label": "_devWallet",
+          "astId": 5566,
+          "type": "t_address",
+          "src": "5372:26:7"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": [],
+        "storageUncheckedVars": [
+          {
+            "contract": "AccessControlUpgradeSafe",
+            "path": "@openzeppelin/contracts-ethereum-package/contracts/access/AccessControl.sol",
+            "label": "_roles",
+            "astId": 5762,
+            "type": "t_mapping<t_struct<AccessControlUpgradeSafe.RoleData>>",
+            "src": "1727:44:10"
+          }
+        ],
+        "storageDiff": [
+          {
+            "action": "append",
+            "updated": {
+              "index": 19,
+              "contract": "SwapToken",
+              "path": "contracts/SwapToken.sol",
+              "label": "_devWallet",
+              "astId": 5566,
+              "type": "t_address",
+              "src": "5372:26:7"
+            }
+          }
+        ]
+      }
+    },
+    "SwapStakingContract": {
+      "address": "0x94c5F7d26A718F47d3db490D7bDB178324f1F34E",
+      "constructorCode": "608060405234801561001057600080fd5b50613044806100206000396000f3fe",
+      "bodyBytecodeHash": "44668790100ad1f27de5bd30a4487a37e9d957c72f35b6fff78321e71a0c6ace",
+      "localBytecodeHash": "47a123b08c07267b4e500d7955ece74fb5d7c6870d0aec46f81e0405f03247e8",
+      "deployedBytecodeHash": "47a123b08c07267b4e500d7955ece74fb5d7c6870d0aec46f81e0405f03247e8",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_array:50<t_uint256>": {
+          "id": "t_array:50<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "50",
+          "kind": "array",
+          "label": "uint256[50]"
+        },
+        "t_struct<AccessControlUpgradeSafe.RoleData>": {
+          "id": "t_struct<AccessControlUpgradeSafe.RoleData>",
+          "kind": "struct",
+          "label": "AccessControlUpgradeSafe.RoleData",
+          "members": [
+            {
+              "label": "members",
+              "astId": 5701,
+              "type": "t_struct<EnumerableSet.AddressSet>",
+              "src": "1655:32:10"
+            },
+            {
+              "label": "adminRole",
+              "astId": 5703,
+              "type": "t_bytes32",
+              "src": "1697:17:10"
+            }
+          ]
+        },
+        "t_struct<EnumerableSet.AddressSet>": {
+          "id": "t_struct<EnumerableSet.AddressSet>",
+          "kind": "struct",
+          "label": "EnumerableSet.AddressSet",
+          "members": [
+            {
+              "label": "_inner",
+              "astId": 7602,
+              "type": "t_struct<EnumerableSet.Set>",
+              "src": "4644:10:21"
+            }
+          ]
+        },
+        "t_struct<EnumerableSet.Set>": {
+          "id": "t_struct<EnumerableSet.Set>",
+          "kind": "struct",
+          "label": "EnumerableSet.Set",
+          "members": [
+            {
+              "label": "_values",
+              "astId": 7423,
+              "type": "t_array:dyn<t_bytes32>",
+              "src": "1213:17:21"
+            },
+            {
+              "label": "_indexes",
+              "astId": 7427,
+              "type": "t_mapping<t_uint256>",
+              "src": "1364:37:21"
+            }
+          ]
+        },
+        "t_bytes32": {
+          "id": "t_bytes32",
+          "kind": "elementary",
+          "label": "bytes32"
+        },
+        "t_array:dyn<t_bytes32>": {
+          "id": "t_array:dyn<t_bytes32>",
+          "valueType": "t_bytes32",
+          "length": "dyn",
+          "kind": "array",
+          "label": "bytes32[]"
+        },
+        "t_mapping<t_uint256>": {
+          "id": "t_mapping<t_uint256>",
+          "valueType": "t_uint256",
+          "label": "mapping(key => uint256)",
+          "kind": "mapping"
+        },
+        "t_mapping<t_struct<AccessControlUpgradeSafe.RoleData>>": {
+          "id": "t_mapping<t_struct<AccessControlUpgradeSafe.RoleData>>",
+          "valueType": "t_struct<AccessControlUpgradeSafe.RoleData>",
+          "label": "mapping(key => AccessControlUpgradeSafe.RoleData)",
+          "kind": "mapping"
+        },
+        "t_array:49<t_uint256>": {
+          "id": "t_array:49<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "49",
+          "kind": "array",
+          "label": "uint256[49]"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_struct<SwapStakingContract.StakeDeposit>": {
+          "id": "t_struct<SwapStakingContract.StakeDeposit>",
+          "kind": "struct",
+          "label": "SwapStakingContract.StakeDeposit",
+          "members": [
+            {
+              "label": "amount",
+              "astId": 4314,
+              "type": "t_uint256",
+              "src": "1586:14:6"
+            },
+            {
+              "label": "startDate",
+              "astId": 4316,
+              "type": "t_uint256",
+              "src": "1610:17:6"
+            },
+            {
+              "label": "endDate",
+              "astId": 4318,
+              "type": "t_uint256",
+              "src": "1637:15:6"
+            },
+            {
+              "label": "entryRewardPoints",
+              "astId": 4320,
+              "type": "t_uint256",
+              "src": "1662:25:6"
+            },
+            {
+              "label": "exitRewardPoints",
+              "astId": 4322,
+              "type": "t_uint256",
+              "src": "1697:24:6"
+            },
+            {
+              "label": "exists",
+              "astId": 4324,
+              "type": "t_bool",
+              "src": "1731:11:6"
+            }
+          ]
+        },
+        "t_mapping<t_struct<SwapStakingContract.StakeDeposit>>": {
+          "id": "t_mapping<t_struct<SwapStakingContract.StakeDeposit>>",
+          "valueType": "t_struct<SwapStakingContract.StakeDeposit>",
+          "label": "mapping(key => SwapStakingContract.StakeDeposit)",
+          "kind": "mapping"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol",
+          "label": "initialized",
+          "astId": 5599,
+          "type": "t_bool",
+          "src": "757:24:9"
+        },
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol",
+          "label": "initializing",
+          "astId": 5601,
+          "type": "t_bool",
+          "src": "876:25:9"
+        },
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol",
+          "label": "______gap",
+          "astId": 5664,
+          "type": "t_array:50<t_uint256>",
+          "src": "1982:29:9"
+        },
+        {
+          "contract": "ContextUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol",
+          "label": "__gap",
+          "astId": 5594,
+          "type": "t_array:50<t_uint256>",
+          "src": "1277:25:8"
+        },
+        {
+          "contract": "AccessControlUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/access/AccessControl.sol",
+          "label": "_roles",
+          "astId": 5708,
+          "type": "t_mapping<t_struct<AccessControlUpgradeSafe.RoleData>>",
+          "src": "1727:44:10"
+        },
+        {
+          "contract": "AccessControlUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/access/AccessControl.sol",
+          "label": "__gap",
+          "astId": 5942,
+          "type": "t_array:49<t_uint256>",
+          "src": "6927:25:10"
+        },
+        {
+          "contract": "PausableUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol",
+          "label": "_paused",
+          "astId": 7815,
+          "type": "t_bool",
+          "src": "825:20:22"
+        },
+        {
+          "contract": "PausableUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol",
+          "label": "__gap",
+          "astId": 7898,
+          "type": "t_array:49<t_uint256>",
+          "src": "2073:25:22"
+        },
+        {
+          "contract": "ReentrancyGuardUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/utils/ReentrancyGuard.sol",
+          "label": "_notEntered",
+          "astId": 7906,
+          "type": "t_bool",
+          "src": "866:24:23"
+        },
+        {
+          "contract": "ReentrancyGuardUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/utils/ReentrancyGuard.sol",
+          "label": "__gap",
+          "astId": 7946,
+          "type": "t_array:49<t_uint256>",
+          "src": "2341:25:23"
+        },
+        {
+          "contract": "SwapStakingContract",
+          "path": "contracts/SwapStakingContract.sol",
+          "label": "token",
+          "astId": 4327,
+          "type": "t_address",
+          "src": "1787:19:6"
+        },
+        {
+          "contract": "SwapStakingContract",
+          "path": "contracts/SwapStakingContract.sol",
+          "label": "rewardsAddress",
+          "astId": 4329,
+          "type": "t_address",
+          "src": "1812:29:6"
+        },
+        {
+          "contract": "SwapStakingContract",
+          "path": "contracts/SwapStakingContract.sol",
+          "label": "maxStakingAmount",
+          "astId": 4331,
+          "type": "t_uint256",
+          "src": "1847:31:6"
+        },
+        {
+          "contract": "SwapStakingContract",
+          "path": "contracts/SwapStakingContract.sol",
+          "label": "currentTotalStake",
+          "astId": 4333,
+          "type": "t_uint256",
+          "src": "1884:32:6"
+        },
+        {
+          "contract": "SwapStakingContract",
+          "path": "contracts/SwapStakingContract.sol",
+          "label": "unstakingPeriod",
+          "astId": 4335,
+          "type": "t_uint256",
+          "src": "1922:30:6"
+        },
+        {
+          "contract": "SwapStakingContract",
+          "path": "contracts/SwapStakingContract.sol",
+          "label": "totalRewardPoints",
+          "astId": 4337,
+          "type": "t_uint256",
+          "src": "1985:33:6"
+        },
+        {
+          "contract": "SwapStakingContract",
+          "path": "contracts/SwapStakingContract.sol",
+          "label": "rewardsDistributed",
+          "astId": 4339,
+          "type": "t_uint256",
+          "src": "2024:33:6"
+        },
+        {
+          "contract": "SwapStakingContract",
+          "path": "contracts/SwapStakingContract.sol",
+          "label": "rewardsWithdrawn",
+          "astId": 4341,
+          "type": "t_uint256",
+          "src": "2063:31:6"
+        },
+        {
+          "contract": "SwapStakingContract",
+          "path": "contracts/SwapStakingContract.sol",
+          "label": "totalRewardsDistributed",
+          "astId": 4343,
+          "type": "t_uint256",
+          "src": "2100:38:6"
+        },
+        {
+          "contract": "SwapStakingContract",
+          "path": "contracts/SwapStakingContract.sol",
+          "label": "_stakeDeposits",
+          "astId": 4347,
+          "type": "t_mapping<t_struct<SwapStakingContract.StakeDeposit>>",
+          "src": "2145:55:6"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": [],
+        "storageUncheckedVars": [
+          {
+            "contract": "AccessControlUpgradeSafe",
+            "path": "@openzeppelin/contracts-ethereum-package/contracts/access/AccessControl.sol",
+            "label": "_roles",
+            "astId": 5708,
+            "type": "t_mapping<t_struct<AccessControlUpgradeSafe.RoleData>>",
+            "src": "1727:44:10"
+          },
+          {
+            "contract": "SwapStakingContract",
+            "path": "contracts/SwapStakingContract.sol",
+            "label": "_stakeDeposits",
+            "astId": 4347,
+            "type": "t_mapping<t_struct<SwapStakingContract.StakeDeposit>>",
+            "src": "2145:55:6"
+          }
+        ],
+        "storageDiff": []
+      }
+    },
+    "PriceEstimator": {
+      "address": "0x80B5C413972d4D5f4d2534Bfd38f2f71dF245C00",
+      "constructorCode": "608060405234801561001057600080fd5b50610be0806100206000396000f3fe",
+      "bodyBytecodeHash": "7a269839b305b0c8a3625094ffcdfee495860783212022d4574582c854f97ca0",
+      "localBytecodeHash": "77246feff9158ef2509258a10b737a1f2fbb4392b36d1b2e139e8d80e371344a",
+      "deployedBytecodeHash": "77246feff9158ef2509258a10b737a1f2fbb4392b36d1b2e139e8d80e371344a",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_array:50<t_uint256>": {
+          "id": "t_array:50<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "50",
+          "kind": "array",
+          "label": "uint256[50]"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_array:49<t_uint256>": {
+          "id": "t_array:49<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "49",
+          "kind": "array",
+          "label": "uint256[49]"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol",
+          "label": "initialized",
+          "astId": 3106,
+          "type": "t_bool",
+          "src": "757:24:8"
+        },
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol",
+          "label": "initializing",
+          "astId": 3108,
+          "type": "t_bool",
+          "src": "876:25:8"
+        },
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol",
+          "label": "______gap",
+          "astId": 3171,
+          "type": "t_array:50<t_uint256>",
+          "src": "1982:29:8"
+        },
+        {
+          "contract": "ContextUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol",
+          "label": "__gap",
+          "astId": 3101,
+          "type": "t_array:50<t_uint256>",
+          "src": "1277:25:7"
+        },
+        {
+          "contract": "OwnableUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol",
+          "label": "_owner",
+          "astId": 3460,
+          "type": "t_address",
+          "src": "651:22:10"
+        },
+        {
+          "contract": "OwnableUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol",
+          "label": "__gap",
+          "astId": 3573,
+          "type": "t_array:49<t_uint256>",
+          "src": "2434:25:10"
+        },
+        {
+          "contract": "PriceEstimator",
+          "path": "contracts/PriceEstimator.sol",
+          "label": "uniswapRouter",
+          "astId": 111,
+          "type": "t_address",
+          "src": "505:41:3"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    },
+    "SwapSmartLock": {
+      "address": "0x0ABF0336AEC364395a0c28b156C74C34c1215472",
+      "constructorCode": "608060405234801561001057600080fd5b50613ac2806100206000396000f3fe",
+      "bodyBytecodeHash": "bc4fcf4201526759f9761b887392eff00538d57066860b2965f3e318b65b0ad8",
+      "localBytecodeHash": "9feb807d2623b0248761444d3c3a07cc4dce225278dd8df3c0e578396e6b2930",
+      "deployedBytecodeHash": "9feb807d2623b0248761444d3c3a07cc4dce225278dd8df3c0e578396e6b2930",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_array:50<t_uint256>": {
+          "id": "t_array:50<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "50",
+          "kind": "array",
+          "label": "uint256[50]"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_array:49<t_uint256>": {
+          "id": "t_array:49<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "49",
+          "kind": "array",
+          "label": "uint256[49]"
+        },
+        "t_address_payable": {
+          "id": "t_address_payable",
+          "kind": "elementary",
+          "label": "address payable"
+        },
+        "t_array:dyn<t_uint256>": {
+          "id": "t_array:dyn<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "dyn",
+          "kind": "array",
+          "label": "uint256[]"
+        },
+        "t_mapping<t_array:dyn<t_uint256>>": {
+          "id": "t_mapping<t_array:dyn<t_uint256>>",
+          "valueType": "t_array:dyn<t_uint256>",
+          "label": "mapping(key => uint256[])",
+          "kind": "mapping"
+        },
+        "t_struct<SwapSmartLock.Payment>": {
+          "id": "t_struct<SwapSmartLock.Payment>",
+          "kind": "struct",
+          "label": "SwapSmartLock.Payment",
+          "members": [
+            {
+              "label": "token",
+              "astId": 2595,
+              "type": "t_address",
+              "src": "1316:13:5"
+            },
+            {
+              "label": "sender",
+              "astId": 2597,
+              "type": "t_address",
+              "src": "1355:14:5"
+            },
+            {
+              "label": "beneficiary",
+              "astId": 2599,
+              "type": "t_address_payable",
+              "src": "1379:27:5"
+            },
+            {
+              "label": "amount",
+              "astId": 2601,
+              "type": "t_uint256",
+              "src": "1452:14:5"
+            },
+            {
+              "label": "releaseTime",
+              "astId": 2603,
+              "type": "t_uint256",
+              "src": "1476:19:5"
+            },
+            {
+              "label": "createdAt",
+              "astId": 2605,
+              "type": "t_uint256",
+              "src": "1505:17:5"
+            },
+            {
+              "label": "status",
+              "astId": 2607,
+              "type": "t_enum<SwapSmartLock.Status>",
+              "src": "1532:13:5"
+            }
+          ]
+        },
+        "t_enum<SwapSmartLock.Status>": {
+          "id": "t_enum<SwapSmartLock.Status>",
+          "kind": "enum",
+          "label": "SwapSmartLock.Status",
+          "members": [
+            "CLOSED",
+            "OPEN"
+          ]
+        },
+        "t_mapping<t_struct<SwapSmartLock.Payment>>": {
+          "id": "t_mapping<t_struct<SwapSmartLock.Payment>>",
+          "valueType": "t_struct<SwapSmartLock.Payment>",
+          "label": "mapping(key => SwapSmartLock.Payment)",
+          "kind": "mapping"
+        },
+        "t_mapping<t_bool>": {
+          "id": "t_mapping<t_bool>",
+          "valueType": "t_bool",
+          "label": "mapping(key => bool)",
+          "kind": "mapping"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol",
+          "label": "initialized",
+          "astId": 5457,
+          "type": "t_bool",
+          "src": "757:24:9"
+        },
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol",
+          "label": "initializing",
+          "astId": 5459,
+          "type": "t_bool",
+          "src": "876:25:9"
+        },
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol",
+          "label": "______gap",
+          "astId": 5522,
+          "type": "t_array:50<t_uint256>",
+          "src": "1982:29:9"
+        },
+        {
+          "contract": "ContextUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol",
+          "label": "__gap",
+          "astId": 5452,
+          "type": "t_array:50<t_uint256>",
+          "src": "1277:25:8"
+        },
+        {
+          "contract": "OwnableUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol",
+          "label": "_owner",
+          "astId": 5811,
+          "type": "t_address",
+          "src": "651:22:11"
+        },
+        {
+          "contract": "OwnableUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol",
+          "label": "__gap",
+          "astId": 5924,
+          "type": "t_array:49<t_uint256>",
+          "src": "2434:25:11"
+        },
+        {
+          "contract": "PausableUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol",
+          "label": "_paused",
+          "astId": 7673,
+          "type": "t_bool",
+          "src": "825:20:22"
+        },
+        {
+          "contract": "PausableUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol",
+          "label": "__gap",
+          "astId": 7756,
+          "type": "t_array:49<t_uint256>",
+          "src": "2073:25:22"
+        },
+        {
+          "contract": "SwapSmartLock",
+          "path": "contracts/SwapSmartLock.sol",
+          "label": "_swapToken",
+          "astId": 2577,
+          "type": "t_address",
+          "src": "895:25:5"
+        },
+        {
+          "contract": "SwapSmartLock",
+          "path": "contracts/SwapSmartLock.sol",
+          "label": "_feesWallet",
+          "astId": 2579,
+          "type": "t_address_payable",
+          "src": "959:35:5"
+        },
+        {
+          "contract": "SwapSmartLock",
+          "path": "contracts/SwapSmartLock.sol",
+          "label": "_devWallet",
+          "astId": 2581,
+          "type": "t_address",
+          "src": "1037:26:5"
+        },
+        {
+          "contract": "SwapSmartLock",
+          "path": "contracts/SwapSmartLock.sol",
+          "label": "_paymentId",
+          "astId": 2610,
+          "type": "t_uint256",
+          "src": "1630:26:5"
+        },
+        {
+          "contract": "SwapSmartLock",
+          "path": "contracts/SwapSmartLock.sol",
+          "label": "_beneficiaryVsPaymentIds",
+          "astId": 2615,
+          "type": "t_mapping<t_array:dyn<t_uint256>>",
+          "src": "1716:62:5"
+        },
+        {
+          "contract": "SwapSmartLock",
+          "path": "contracts/SwapSmartLock.sol",
+          "label": "_senderVsPaymentIds",
+          "astId": 2620,
+          "type": "t_mapping<t_array:dyn<t_uint256>>",
+          "src": "1828:57:5"
+        },
+        {
+          "contract": "SwapSmartLock",
+          "path": "contracts/SwapSmartLock.sol",
+          "label": "_idVsPayment",
+          "astId": 2624,
+          "type": "t_mapping<t_struct<SwapSmartLock.Payment>>",
+          "src": "1892:48:5"
+        },
+        {
+          "contract": "SwapSmartLock",
+          "path": "contracts/SwapSmartLock.sol",
+          "label": "_priceEstimator",
+          "astId": 2626,
+          "type": "t_address",
+          "src": "1947:39:5"
+        },
+        {
+          "contract": "SwapSmartLock",
+          "path": "contracts/SwapSmartLock.sol",
+          "label": "_ethFeePercentage",
+          "astId": 2628,
+          "type": "t_uint256",
+          "src": "1993:33:5"
+        },
+        {
+          "contract": "SwapSmartLock",
+          "path": "contracts/SwapSmartLock.sol",
+          "label": "_allowedFeeSlippagePercentage",
+          "astId": 2630,
+          "type": "t_uint256",
+          "src": "2032:45:5"
+        },
+        {
+          "contract": "SwapSmartLock",
+          "path": "contracts/SwapSmartLock.sol",
+          "label": "_uniswapFeePercentage",
+          "astId": 2632,
+          "type": "t_uint256",
+          "src": "2083:37:5"
+        },
+        {
+          "contract": "SwapSmartLock",
+          "path": "contracts/SwapSmartLock.sol",
+          "label": "_maxFeeInEth",
+          "astId": 2634,
+          "type": "t_uint256",
+          "src": "2127:28:5"
+        },
+        {
+          "contract": "SwapSmartLock",
+          "path": "contracts/SwapSmartLock.sol",
+          "label": "_listFreeTokens",
+          "astId": 2638,
+          "type": "t_mapping<t_bool>",
+          "src": "2188:48:5"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": [],
+        "storageUncheckedVars": [
+          {
+            "contract": "SwapSmartLock",
+            "path": "contracts/SwapSmartLock.sol",
+            "label": "_idVsPayment",
+            "astId": 2624,
+            "type": "t_mapping<t_struct<SwapSmartLock.Payment>>",
+            "src": "1892:48:5"
+          }
+        ],
+        "storageDiff": [
+          {
+            "action": "append",
+            "updated": {
+              "index": 19,
+              "contract": "SwapSmartLock",
+              "path": "contracts/SwapSmartLock.sol",
+              "label": "_maxFeeInEth",
+              "astId": 2634,
+              "type": "t_uint256",
+              "src": "2127:28:5"
+            }
+          },
+          {
+            "action": "append",
+            "updated": {
+              "index": 20,
+              "contract": "SwapSmartLock",
+              "path": "contracts/SwapSmartLock.sol",
+              "label": "_listFreeTokens",
+              "astId": 2638,
+              "type": "t_mapping<t_bool>",
+              "src": "2188:48:5"
+            }
+          }
+        ]
+      }
+    },
+    "SmartSwap": {
+      "address": "0x03089Ee8F8505eD44cb567836bBC04b3426fB943",
+      "constructorCode": "608060405234801561001057600080fd5b506151f9806100206000396000f3fe",
+      "bodyBytecodeHash": "9dd0d3bea4a9e219936cfed09ee7690e47d5a5191fcb39fb469258bcb093711f",
+      "localBytecodeHash": "b9bb35ff859126382df3ed02fb802620f43175048e9d0272db193de09535f9c6",
+      "deployedBytecodeHash": "b9bb35ff859126382df3ed02fb802620f43175048e9d0272db193de09535f9c6",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_array:50<t_uint256>": {
+          "id": "t_array:50<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "50",
+          "kind": "array",
+          "label": "uint256[50]"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_array:49<t_uint256>": {
+          "id": "t_array:49<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "49",
+          "kind": "array",
+          "label": "uint256[49]"
+        },
+        "t_struct<SmartSwap.Swap>": {
+          "id": "t_struct<SmartSwap.Swap>",
+          "kind": "struct",
+          "label": "SmartSwap.Swap",
+          "members": [
+            {
+              "label": "openValue",
+              "astId": 330,
+              "type": "t_uint256",
+              "src": "786:17:4"
+            },
+            {
+              "label": "closeValue",
+              "astId": 332,
+              "type": "t_uint256",
+              "src": "813:18:4"
+            },
+            {
+              "label": "openTrader",
+              "astId": 334,
+              "type": "t_address_payable",
+              "src": "841:26:4"
+            },
+            {
+              "label": "closeTrader",
+              "astId": 336,
+              "type": "t_address_payable",
+              "src": "877:27:4"
+            },
+            {
+              "label": "openContractAddress",
+              "astId": 338,
+              "type": "t_address",
+              "src": "914:27:4"
+            },
+            {
+              "label": "closeContractAddress",
+              "astId": 340,
+              "type": "t_address",
+              "src": "951:28:4"
+            },
+            {
+              "label": "swapType",
+              "astId": 342,
+              "type": "t_enum<SmartSwap.SwapType>",
+              "src": "989:17:4"
+            },
+            {
+              "label": "status",
+              "astId": 344,
+              "type": "t_enum<SmartSwap.Status>",
+              "src": "1016:13:4"
+            }
+          ]
+        },
+        "t_address_payable": {
+          "id": "t_address_payable",
+          "kind": "elementary",
+          "label": "address payable"
+        },
+        "t_enum<SmartSwap.SwapType>": {
+          "id": "t_enum<SmartSwap.SwapType>",
+          "kind": "enum",
+          "label": "SmartSwap.SwapType",
+          "members": [
+            "ETH_TO_ERC20",
+            "ERC20_TO_ETH",
+            "ERC20_TO_ERC20"
+          ]
+        },
+        "t_enum<SmartSwap.Status>": {
+          "id": "t_enum<SmartSwap.Status>",
+          "kind": "enum",
+          "label": "SmartSwap.Status",
+          "members": [
+            "OPEN",
+            "CLOSED",
+            "CANCELLED"
+          ]
+        },
+        "t_mapping<t_struct<SmartSwap.Swap>>": {
+          "id": "t_mapping<t_struct<SmartSwap.Swap>>",
+          "valueType": "t_struct<SmartSwap.Swap>",
+          "label": "mapping(key => SmartSwap.Swap)",
+          "kind": "mapping"
+        },
+        "t_mapping<t_bool>": {
+          "id": "t_mapping<t_bool>",
+          "valueType": "t_bool",
+          "label": "mapping(key => bool)",
+          "kind": "mapping"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol",
+          "label": "initialized",
+          "astId": 5457,
+          "type": "t_bool",
+          "src": "757:24:9"
+        },
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol",
+          "label": "initializing",
+          "astId": 5459,
+          "type": "t_bool",
+          "src": "876:25:9"
+        },
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol",
+          "label": "______gap",
+          "astId": 5522,
+          "type": "t_array:50<t_uint256>",
+          "src": "1982:29:9"
+        },
+        {
+          "contract": "ContextUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol",
+          "label": "__gap",
+          "astId": 5452,
+          "type": "t_array:50<t_uint256>",
+          "src": "1277:25:8"
+        },
+        {
+          "contract": "OwnableUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol",
+          "label": "_owner",
+          "astId": 5811,
+          "type": "t_address",
+          "src": "651:22:11"
+        },
+        {
+          "contract": "OwnableUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol",
+          "label": "__gap",
+          "astId": 5924,
+          "type": "t_array:49<t_uint256>",
+          "src": "2434:25:11"
+        },
+        {
+          "contract": "PausableUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol",
+          "label": "_paused",
+          "astId": 7673,
+          "type": "t_bool",
+          "src": "825:20:22"
+        },
+        {
+          "contract": "PausableUpgradeSafe",
+          "path": "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol",
+          "label": "__gap",
+          "astId": 7756,
+          "type": "t_array:49<t_uint256>",
+          "src": "2073:25:22"
+        },
+        {
+          "contract": "SmartSwap",
+          "path": "contracts/SmartSwap.sol",
+          "label": "_swapId",
+          "astId": 359,
+          "type": "t_uint256",
+          "src": "1329:23:4"
+        },
+        {
+          "contract": "SmartSwap",
+          "path": "contracts/SmartSwap.sol",
+          "label": "_swaps",
+          "astId": 363,
+          "type": "t_mapping<t_struct<SmartSwap.Swap>>",
+          "src": "1359:40:4"
+        },
+        {
+          "contract": "SmartSwap",
+          "path": "contracts/SmartSwap.sol",
+          "label": "_swapToken",
+          "astId": 365,
+          "type": "t_address",
+          "src": "1406:25:4"
+        },
+        {
+          "contract": "SmartSwap",
+          "path": "contracts/SmartSwap.sol",
+          "label": "_feesWallet",
+          "astId": 367,
+          "type": "t_address_payable",
+          "src": "1470:35:4"
+        },
+        {
+          "contract": "SmartSwap",
+          "path": "contracts/SmartSwap.sol",
+          "label": "_devWallet",
+          "astId": 369,
+          "type": "t_address",
+          "src": "1548:26:4"
+        },
+        {
+          "contract": "SmartSwap",
+          "path": "contracts/SmartSwap.sol",
+          "label": "_ethFeePercentage",
+          "astId": 371,
+          "type": "t_uint256",
+          "src": "1581:33:4"
+        },
+        {
+          "contract": "SmartSwap",
+          "path": "contracts/SmartSwap.sol",
+          "label": "_allowedFeeSlippagePercentage",
+          "astId": 373,
+          "type": "t_uint256",
+          "src": "1620:45:4"
+        },
+        {
+          "contract": "SmartSwap",
+          "path": "contracts/SmartSwap.sol",
+          "label": "_uniswapFeePercentage",
+          "astId": 375,
+          "type": "t_uint256",
+          "src": "1671:37:4"
+        },
+        {
+          "contract": "SmartSwap",
+          "path": "contracts/SmartSwap.sol",
+          "label": "_priceEstimator",
+          "astId": 377,
+          "type": "t_address",
+          "src": "1715:39:4"
+        },
+        {
+          "contract": "SmartSwap",
+          "path": "contracts/SmartSwap.sol",
+          "label": "_listFreeTokens",
+          "astId": 381,
+          "type": "t_mapping<t_bool>",
+          "src": "1787:48:4"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    }
+  },
+  "solidityLibs": {},
+  "proxies": {
+    "swaptoken/SwapToken": [
+      {
+        "address": "0xCC4304A31d09258b0029eA7FE63d032f52e44EFe",
+        "version": "1.0.0",
+        "implementation": "0x907c6d5Bf04DC6f2cC34cEb649AdB18BF356EEbe",
+        "admin": "0x898Da6b2E015C64C060025cC5EBcf588290E6A79",
+        "kind": "Upgradeable"
+      }
+    ],
+    "swaptoken/SwapStakingContract": [
+      {
+        "address": "0x5A753021CE28CBC5A7c51f732ba83873D673d8cC",
+        "version": "1.0.0",
+        "implementation": "0x94c5F7d26A718F47d3db490D7bDB178324f1F34E",
+        "admin": "0x898Da6b2E015C64C060025cC5EBcf588290E6A79",
+        "kind": "Upgradeable"
+      }
+    ],
+    "swaptoken/PriceEstimator": [
+      {
+        "address": "0x0198b65cd2C12eAE4fb7Ea1996B8470b6c649E11",
+        "version": "1.0.0",
+        "implementation": "0x80B5C413972d4D5f4d2534Bfd38f2f71dF245C00",
+        "admin": "0x898Da6b2E015C64C060025cC5EBcf588290E6A79",
+        "kind": "Upgradeable"
+      }
+    ],
+    "swaptoken/SwapSmartLock": [
+      {
+        "address": "0x06d0CCbfA6F1EEc7ca61288F8545eFD977384C70",
+        "version": "1.0.0",
+        "implementation": "0x0ABF0336AEC364395a0c28b156C74C34c1215472",
+        "admin": "0x898Da6b2E015C64C060025cC5EBcf588290E6A79",
+        "kind": "Upgradeable"
+      }
+    ],
+    "swaptoken/SmartSwap": [
+      {
+        "address": "0x8D9845D2c7991F595700Aa263d512721D61e7DDb",
+        "version": "1.0.0",
+        "implementation": "0x03089Ee8F8505eD44cb567836bBC04b3426fB943",
+        "admin": "0x898Da6b2E015C64C060025cC5EBcf588290E6A79",
+        "kind": "Upgradeable"
+      }
+    ]
+  },
+  "manifestVersion": "2.2",
+  "version": "1.0.0",
+  "proxyAdmin": {
+    "address": "0x898Da6b2E015C64C060025cC5EBcf588290E6A79"
+  }
+}
