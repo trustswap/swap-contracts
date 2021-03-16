@@ -22,7 +22,7 @@ contract SwapStakingContract is Initializable, ContextUpgradeSafe, AccessControl
 
     // EVENTS
     event StakeDeposited(address indexed account, uint256 amount);
-    event WithdrawInitiated(address indexed account, uint256 amount);
+    event WithdrawInitiated(address indexed account, uint256 amount, uint256 initiateDate);
     event WithdrawExecuted(address indexed account, uint256 amount, uint256 reward);
     event RewardsWithdrawn(address indexed account, uint256 reward);
     event RewardsDistributed(uint256 amount);
@@ -35,6 +35,12 @@ contract SwapStakingContract is Initializable, ContextUpgradeSafe, AccessControl
         uint256 entryRewardPoints;
         uint256 exitRewardPoints;
         bool exists;
+    }
+
+    // STRUCT WITHDRAWAL
+    struct WithdrawalState {
+        uint256 initiateDate;
+        uint256 amount;
     }
 
     // CONTRACT STATE VARIABLES
@@ -51,6 +57,8 @@ contract SwapStakingContract is Initializable, ContextUpgradeSafe, AccessControl
     uint256 public totalRewardsDistributed;
 
     mapping(address => StakeDeposit) private _stakeDeposits;
+    
+    WithdrawalState withdrawState;
 
     // MODIFIERS
     modifier guardMaxStakingLimit(uint256 amount)
@@ -180,21 +188,25 @@ contract SwapStakingContract is Initializable, ContextUpgradeSafe, AccessControl
         emit StakeDeposited(msg.sender, amount.add(reward));
     }
 
-    function initiateWithdrawal()
+    function initiateWithdrawal(uint256 withdrawAmount)
     external
     nonReentrant
     whenNotPaused
     {
         StakeDeposit storage stakeDeposit = _stakeDeposits[msg.sender];
+        require(withdrawAmount <= stakeDeposit.amount, "[Initiate Withdrawal] Withdraw amount exceed the stake amount");
         require(stakeDeposit.exists && stakeDeposit.amount != 0, "[Initiate Withdrawal] There is no stake deposit for this account");
         require(stakeDeposit.endDate == 0, "[Initiate Withdrawal] You have already initiated the withdrawal");
+        require(withdrawState.amount == 0, "[Initiate Withdrawal] You have already initiated the withdrawal");
 
         stakeDeposit.endDate = block.timestamp;
         stakeDeposit.exitRewardPoints = totalRewardPoints;
+        withdrawState.amount = withdrawAmount;
+        withdrawState.initiateDate = block.timestamp;
 
-        currentTotalStake = currentTotalStake.sub(stakeDeposit.amount);
+        currentTotalStake = currentTotalStake.sub(withdrawAmount);
 
-        emit WithdrawInitiated(msg.sender, stakeDeposit.amount);
+        emit WithdrawInitiated(msg.sender, withdrawAmount, block.timestamp);
     }
 
     function executeWithdrawal()
@@ -203,6 +215,7 @@ contract SwapStakingContract is Initializable, ContextUpgradeSafe, AccessControl
     whenNotPaused
     {
         StakeDeposit memory stakeDeposit = _stakeDeposits[msg.sender];
+        require(withdrawState.amount != 0, "[Withdraw] Withdraw amount is not initialized");
         require(stakeDeposit.exists && stakeDeposit.amount != 0, "[Withdraw] There is no stake deposit for this account");
         require(stakeDeposit.endDate != 0, "[Withdraw] Withdraw is not initialized");
 
@@ -210,10 +223,17 @@ contract SwapStakingContract is Initializable, ContextUpgradeSafe, AccessControl
         uint256 daysPassed = (block.timestamp - stakeDeposit.endDate) / 1 days;
         require(unstakingPeriod <= daysPassed, "[Withdraw] The unstaking period did not pass");
 
-        uint256 amount = stakeDeposit.amount;
+        uint256 amount = withdrawState.amount;
         uint256 reward = _computeReward(stakeDeposit);
 
-        delete _stakeDeposits[msg.sender];
+        require(stakeDeposit.amount >= amount, "[withdraw] Remaining stakedeposit amount must be higher than withdraw amount");
+        if (stakeDeposit.amount > amount) {
+            _stakeDeposits[msg.sender].amount = _stakeDeposits[msg.sender].amount.sub(amount);
+            _stakeDeposits[msg.sender].endDate = 0;
+        }
+        else {
+            delete _stakeDeposits[msg.sender];
+        }
 
         require(token.transfer(msg.sender, amount), "[Withdraw] Something went wrong while transferring your initial deposit");
         
@@ -222,6 +242,9 @@ contract SwapStakingContract is Initializable, ContextUpgradeSafe, AccessControl
             rewardsWithdrawn = rewardsWithdrawn.add(reward);
             require(token.transferFrom(rewardsAddress, msg.sender, reward), "[Withdraw] Something went wrong while transferring your reward");
         }
+
+        withdrawState.amount = 0;
+        withdrawState.initiateDate = 0;
 
         emit WithdrawExecuted(msg.sender, amount, reward);
     }
