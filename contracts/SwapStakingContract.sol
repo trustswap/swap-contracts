@@ -57,8 +57,7 @@ contract SwapStakingContract is Initializable, ContextUpgradeSafe, AccessControl
     uint256 public totalRewardsDistributed;
 
     mapping(address => StakeDeposit) private _stakeDeposits;
-    
-    WithdrawalState withdrawState;
+    mapping(address => WithdrawalState) private _withdrawStates;
 
     // MODIFIERS
     modifier guardMaxStakingLimit(uint256 amount)
@@ -194,6 +193,7 @@ contract SwapStakingContract is Initializable, ContextUpgradeSafe, AccessControl
     whenNotPaused
     {
         StakeDeposit storage stakeDeposit = _stakeDeposits[msg.sender];
+        WithdrawalState storage withdrawState = _withdrawStates[msg.sender];
         require(withdrawAmount <= stakeDeposit.amount, "[Initiate Withdrawal] Withdraw amount exceed the stake amount");
         require(stakeDeposit.exists && stakeDeposit.amount != 0, "[Initiate Withdrawal] There is no stake deposit for this account");
         require(stakeDeposit.endDate == 0, "[Initiate Withdrawal] You have already initiated the withdrawal");
@@ -215,6 +215,8 @@ contract SwapStakingContract is Initializable, ContextUpgradeSafe, AccessControl
     whenNotPaused
     {
         StakeDeposit memory stakeDeposit = _stakeDeposits[msg.sender];
+        WithdrawalState memory withdrawState = _withdrawStates[msg.sender];
+
         require(withdrawState.amount != 0, "[Withdraw] Withdraw amount is not initialized");
         require(stakeDeposit.exists && stakeDeposit.amount != 0, "[Withdraw] There is no stake deposit for this account");
         require(stakeDeposit.endDate != 0, "[Withdraw] Withdraw is not initialized");
@@ -243,8 +245,8 @@ contract SwapStakingContract is Initializable, ContextUpgradeSafe, AccessControl
             require(token.transferFrom(rewardsAddress, msg.sender, reward), "[Withdraw] Something went wrong while transferring your reward");
         }
 
-        withdrawState.amount = 0;
-        withdrawState.initiateDate = 0;
+        _withdrawStates[msg.sender].amount = 0;
+        _withdrawStates[msg.sender].initiateDate = 0;
 
         emit WithdrawExecuted(msg.sender, amount, reward);
     }
