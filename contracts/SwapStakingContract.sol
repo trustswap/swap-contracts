@@ -194,6 +194,7 @@ contract SwapStakingContract is Initializable, ContextUpgradeSafe, AccessControl
     {
         StakeDeposit storage stakeDeposit = _stakeDeposits[msg.sender];
         WithdrawalState storage withdrawState = _withdrawStates[msg.sender];
+        require(withdrawAmount > 0, "[Initiate Withdrawal] Invalid withdrawal amount");
         require(withdrawAmount <= stakeDeposit.amount, "[Initiate Withdrawal] Withdraw amount exceed the stake amount");
         require(stakeDeposit.exists && stakeDeposit.amount != 0, "[Initiate Withdrawal] There is no stake deposit for this account");
         require(stakeDeposit.endDate == 0, "[Initiate Withdrawal] You have already initiated the withdrawal");
@@ -217,9 +218,8 @@ contract SwapStakingContract is Initializable, ContextUpgradeSafe, AccessControl
         StakeDeposit memory stakeDeposit = _stakeDeposits[msg.sender];
         WithdrawalState memory withdrawState = _withdrawStates[msg.sender];
 
-        require(withdrawState.amount != 0, "[Withdraw] Withdraw amount is not initialized");
+        require(stakeDeposit.endDate != 0 || withdrawState.amount != 0, "[Withdraw] Withdraw amount is not initialized");
         require(stakeDeposit.exists && stakeDeposit.amount != 0, "[Withdraw] There is no stake deposit for this account");
-        require(stakeDeposit.endDate != 0, "[Withdraw] Withdraw is not initialized");
 
         // validate enough days have passed from initiating the withdrawal
         uint256 daysPassed = (block.timestamp - stakeDeposit.endDate) / 1 days;
