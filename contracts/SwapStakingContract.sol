@@ -225,7 +225,7 @@ contract SwapStakingContract is Initializable, ContextUpgradeSafe, AccessControl
         uint256 daysPassed = (block.timestamp - stakeDeposit.endDate) / 1 days;
         require(unstakingPeriod <= daysPassed, "[Withdraw] The unstaking period did not pass");
 
-        uint256 amount = withdrawState.amount;
+        uint256 amount = withdrawState.amount != 0 ? withdrawState.amount : stakeDeposit.amount;
         uint256 reward = _computeReward(stakeDeposit);
 
         require(stakeDeposit.amount >= amount, "[withdraw] Remaining stakedeposit amount must be higher than withdraw amount");
