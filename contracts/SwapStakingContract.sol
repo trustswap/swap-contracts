@@ -232,6 +232,7 @@ contract SwapStakingContract is Initializable, ContextUpgradeSafe, AccessControl
         if (stakeDeposit.amount > amount) {
             _stakeDeposits[msg.sender].amount = _stakeDeposits[msg.sender].amount.sub(amount);
             _stakeDeposits[msg.sender].endDate = 0;
+            _stakeDeposits[msg.sender].entryRewardPoints = totalRewardPoints;
         }
         else {
             delete _stakeDeposits[msg.sender];
