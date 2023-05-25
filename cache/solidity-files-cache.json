@@ -1,0 +1,1012 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/home/filip/git/trustswap/swap-contracts/contracts/IERC20Extended.sol": {
+      "lastModificationDate": 1677152763341,
+      "contentHash": "7b295354046a736c3d29b4830e00e165",
+      "sourceName": "contracts/IERC20Extended.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.6.2"
+      ],
+      "artifacts": [
+        "IERC20Extended"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/contracts/SwapSmartLock.sol": {
+      "lastModificationDate": 1677152763341,
+      "contentHash": "74b0fa959f2f5a662c5e9abe45f1814f",
+      "sourceName": "contracts/SwapSmartLock.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-ethereum-package/contracts/math/SafeMath.sol",
+        "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/SafeERC20.sol",
+        "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol",
+        "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol",
+        "@openzeppelin/contracts-ethereum-package/contracts/math/Math.sol",
+        "./IERC20Extended.sol",
+        "./IPriceEstimator.sol"
+      ],
+      "versionPragmas": [
+        "0.6.2"
+      ],
+      "artifacts": [
+        "SwapSmartLock"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/contracts/IPriceEstimator.sol": {
+      "lastModificationDate": 1677152763341,
+      "contentHash": "72e0c8b05bce1c1a4ec1c5ed506769ca",
+      "sourceName": "contracts/IPriceEstimator.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.6.2"
+      ],
+      "artifacts": [
+        "IPriceEstimator"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/node_modules/@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1677152894888,
+      "contentHash": "3aa0c3038c55f2e2c14205311a71e879",
+      "sourceName": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../GSN/Context.sol",
+        "../Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.6.0"
+      ],
+      "artifacts": [
+        "OwnableUpgradeSafe"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/node_modules/@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol": {
+      "lastModificationDate": 1677152894892,
+      "contentHash": "56afb51c3fefe4cd06e7760d3e8642da",
+      "sourceName": "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../GSN/Context.sol",
+        "../Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.6.0"
+      ],
+      "artifacts": [
+        "PausableUpgradeSafe"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/node_modules/@openzeppelin/contracts-ethereum-package/contracts/math/SafeMath.sol": {
+      "lastModificationDate": 1677152898504,
+      "contentHash": "fae58f64850246a4f1ae3b24dfb59efa",
+      "sourceName": "@openzeppelin/contracts-ethereum-package/contracts/math/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.6.0"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/node_modules/@openzeppelin/contracts-ethereum-package/contracts/math/Math.sol": {
+      "lastModificationDate": 1677152894884,
+      "contentHash": "ff55ee5758129908ae3b34db43b31967",
+      "sourceName": "@openzeppelin/contracts-ethereum-package/contracts/math/Math.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.6.0"
+      ],
+      "artifacts": [
+        "Math"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/node_modules/@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/SafeERC20.sol": {
+      "lastModificationDate": 1677152898504,
+      "contentHash": "95e6e051ef0ec49572891748988f3719",
+      "sourceName": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/SafeERC20.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol",
+        "../../math/SafeMath.sol",
+        "../../utils/Address.sol"
+      ],
+      "versionPragmas": [
+        "^0.6.0"
+      ],
+      "artifacts": [
+        "SafeERC20"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/node_modules/@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1677152891748,
+      "contentHash": "b51b3e2390708fa4563fa5bce80babf9",
+      "sourceName": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../GSN/Context.sol",
+        "./IERC20.sol",
+        "../../math/SafeMath.sol",
+        "../../utils/Address.sol",
+        "../../Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.6.0"
+      ],
+      "artifacts": [
+        "ERC20UpgradeSafe"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/node_modules/@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol": {
+      "lastModificationDate": 1677152894876,
+      "contentHash": "402d88f041ed1754339d60ae70077cd9",
+      "sourceName": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.24 <0.7.0"
+      ],
+      "artifacts": [
+        "Initializable"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/node_modules/@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol": {
+      "lastModificationDate": 1677152891720,
+      "contentHash": "29ba4a35181267b3aab4563990e56909",
+      "sourceName": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.6.0"
+      ],
+      "artifacts": [
+        "ContextUpgradeSafe"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/node_modules/@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1677152891800,
+      "contentHash": "dc33f115b06a62f5f6c62af735b8302c",
+      "sourceName": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.6.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/node_modules/@openzeppelin/contracts-ethereum-package/contracts/utils/Address.sol": {
+      "lastModificationDate": 1677152891708,
+      "contentHash": "079b4185b8794e6abce0f0c79ffeb8f5",
+      "sourceName": "@openzeppelin/contracts-ethereum-package/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.6.2"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/node_modules/@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Burnable.sol": {
+      "lastModificationDate": 1677152891752,
+      "contentHash": "212415f556ea4b4dc76e17e2e317797d",
+      "sourceName": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Burnable.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../GSN/Context.sol",
+        "./ERC20.sol",
+        "../../Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.6.0"
+      ],
+      "artifacts": [
+        "ERC20BurnableUpgradeSafe"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/node_modules/@openzeppelin/contracts-ethereum-package/contracts/access/AccessControl.sol": {
+      "lastModificationDate": 1677152891704,
+      "contentHash": "d8932bf1735d53a1b6954331afc1e8d6",
+      "sourceName": "@openzeppelin/contracts-ethereum-package/contracts/access/AccessControl.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/EnumerableSet.sol",
+        "../utils/Address.sol",
+        "../GSN/Context.sol",
+        "../Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.6.0"
+      ],
+      "artifacts": [
+        "AccessControlUpgradeSafe"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/node_modules/@openzeppelin/contracts-ethereum-package/contracts/utils/EnumerableSet.sol": {
+      "lastModificationDate": 1677152891740,
+      "contentHash": "70a75b95955d808020ec348297465a32",
+      "sourceName": "@openzeppelin/contracts-ethereum-package/contracts/utils/EnumerableSet.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.6.0"
+      ],
+      "artifacts": [
+        "EnumerableSet"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/contracts/SwapStakingContract.sol": {
+      "lastModificationDate": 1677152763341,
+      "contentHash": "4d03cd5c93f004282a7f55d1d3699cd2",
+      "sourceName": "contracts/SwapStakingContract.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-ethereum-package/contracts/math/SafeMath.sol",
+        "@openzeppelin/contracts-ethereum-package/contracts/math/Math.sol",
+        "@openzeppelin/contracts-ethereum-package/contracts/utils/Address.sol",
+        "@openzeppelin/contracts-ethereum-package/contracts/utils/Arrays.sol",
+        "@openzeppelin/contracts-ethereum-package/contracts/utils/ReentrancyGuard.sol",
+        "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol",
+        "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts-ethereum-package/contracts/access/AccessControl.sol"
+      ],
+      "versionPragmas": [
+        "0.6.2"
+      ],
+      "artifacts": [
+        "SwapStakingContract"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/node_modules/@openzeppelin/contracts-ethereum-package/contracts/utils/Arrays.sol": {
+      "lastModificationDate": 1677152891712,
+      "contentHash": "7cce9ff2ecf7337e3db0d825d58ec0f7",
+      "sourceName": "@openzeppelin/contracts-ethereum-package/contracts/utils/Arrays.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../math/Math.sol"
+      ],
+      "versionPragmas": [
+        "^0.6.0"
+      ],
+      "artifacts": [
+        "Arrays"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/node_modules/@openzeppelin/contracts-ethereum-package/contracts/utils/ReentrancyGuard.sol": {
+      "lastModificationDate": 1677152898496,
+      "contentHash": "02bbb1cdc56d4ea93ffd0afee5042290",
+      "sourceName": "@openzeppelin/contracts-ethereum-package/contracts/utils/ReentrancyGuard.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.6.0"
+      ],
+      "artifacts": [
+        "ReentrancyGuardUpgradeSafe"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/node_modules/@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Pausable.sol": {
+      "lastModificationDate": 1677152891760,
+      "contentHash": "33b525be96db2e99d3814054e2452605",
+      "sourceName": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Pausable.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC20.sol",
+        "../../utils/Pausable.sol",
+        "../../Initializable.sol"
+      ],
+      "versionPragmas": [
+        "^0.6.0"
+      ],
+      "artifacts": [
+        "ERC20PausableUpgradeSafe"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/contracts/SwapToken.sol": {
+      "lastModificationDate": 1677152763341,
+      "contentHash": "47e4206590b9a92374a72261ff7d2023",
+      "sourceName": "contracts/SwapToken.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-ethereum-package/contracts/access/AccessControl.sol",
+        "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Pausable.sol",
+        "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Burnable.sol"
+      ],
+      "versionPragmas": [
+        "^0.6.0"
+      ],
+      "artifacts": [
+        "SwapToken"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/contracts/SmartSwap.sol": {
+      "lastModificationDate": 1677152763341,
+      "contentHash": "145f2532b26ff3635b1e12eb7f8810d1",
+      "sourceName": "contracts/SmartSwap.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol",
+        "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/SafeERC20.sol",
+        "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol",
+        "./IERC20Extended.sol",
+        "./IPriceEstimator.sol"
+      ],
+      "versionPragmas": [
+        "0.6.2"
+      ],
+      "artifacts": [
+        "SmartSwap"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/contracts/PriceEstimator.sol": {
+      "lastModificationDate": 1677152763341,
+      "contentHash": "6221f6c2a2eaf18002b3a6cb7f54bdaa",
+      "sourceName": "contracts/PriceEstimator.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts-ethereum-package/contracts/utils/Address.sol",
+        "@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol",
+        "./IPriceEstimator.sol"
+      ],
+      "versionPragmas": [
+        "0.6.2"
+      ],
+      "artifacts": [
+        "PriceEstimator"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/contracts/Migrations.sol": {
+      "lastModificationDate": 1677152763341,
+      "contentHash": "06559805e57821b78a95c9bc8ff0d69c",
+      "sourceName": "contracts/Migrations.sol",
+      "solcConfig": {
+        "version": "0.6.2",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.6.0"
+      ],
+      "artifacts": [
+        "Migrations"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/node_modules/@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol": {
+      "lastModificationDate": 1677152891796,
+      "contentHash": "3fd36426274a5b35f7e702f87ba08a8e",
+      "sourceName": "@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IUniswapV2Router01.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.2"
+      ],
+      "artifacts": [
+        "IUniswapV2Router02"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/node_modules/@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router01.sol": {
+      "lastModificationDate": 1677152891792,
+      "contentHash": "95d8729b2c698dc663322167b3c085fe",
+      "sourceName": "@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router01.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.2"
+      ],
+      "artifacts": [
+        "IUniswapV2Router01"
+      ]
+    }
+  }
+}
