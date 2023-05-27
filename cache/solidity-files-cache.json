@@ -858,8 +858,8 @@
       ]
     },
     "/home/filip/git/trustswap/swap-contracts/contracts/PriceEstimator.sol": {
-      "lastModificationDate": 1677152763341,
-      "contentHash": "6221f6c2a2eaf18002b3a6cb7f54bdaa",
+      "lastModificationDate": 1685204077111,
+      "contentHash": "c4dc5f9b531df39c0aa0c9759cd21adc",
       "sourceName": "contracts/PriceEstimator.sol",
       "solcConfig": {
         "version": "0.6.2",
@@ -888,7 +888,7 @@
       "imports": [
         "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol",
         "@openzeppelin/contracts-ethereum-package/contracts/utils/Address.sol",
-        "@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol",
+        "./IUniswapV2Router02.sol",
         "./IPriceEstimator.sol"
       ],
       "versionPragmas": [
@@ -976,6 +976,80 @@
       "lastModificationDate": 1677152891792,
       "contentHash": "95d8729b2c698dc663322167b3c085fe",
       "sourceName": "@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router01.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.2"
+      ],
+      "artifacts": [
+        "IUniswapV2Router01"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/contracts/IUniswapV2Router02.sol": {
+      "lastModificationDate": 1685204067979,
+      "contentHash": "3fd36426274a5b35f7e702f87ba08a8e",
+      "sourceName": "contracts/IUniswapV2Router02.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IUniswapV2Router01.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.2"
+      ],
+      "artifacts": [
+        "IUniswapV2Router02"
+      ]
+    },
+    "/home/filip/git/trustswap/swap-contracts/contracts/IUniswapV2Router01.sol": {
+      "lastModificationDate": 1685204082499,
+      "contentHash": "a7a6d76ce5989e471c2b7fc7be003151",
+      "sourceName": "contracts/IUniswapV2Router01.sol",
       "solcConfig": {
         "version": "0.8.9",
         "settings": {

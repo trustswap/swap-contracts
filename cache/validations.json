@@ -1199,6 +1199,2788 @@
         },
         "solcVersion": "0.6.2"
       },
+      "contracts/IERC20Extended.sol:IERC20Extended": {
+        "src": "contracts/IERC20Extended.sol:3",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "decimals()",
+          "burnFrom(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.6.2"
+      },
+      "contracts/IPriceEstimator.sol:IPriceEstimator": {
+        "src": "contracts/IPriceEstimator.sol:3",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "getEstimatedETHforERC20(uint256,address)",
+          "getEstimatedERC20forETH(uint256,address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.6.2"
+      },
+      "contracts/IUniswapV2Router01.sol:IUniswapV2Router01": {
+        "src": "contracts/IUniswapV2Router01.sol:3",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "factory()",
+          "WPLS()",
+          "addLiquidity(address,address,uint256,uint256,uint256,uint256,address,uint256)",
+          "addLiquidityETH(address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidity(address,address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidityETH(address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidityWithPermit(address,address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)",
+          "removeLiquidityETHWithPermit(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)",
+          "swapExactTokensForTokens(uint256,uint256,address[],address,uint256)",
+          "swapTokensForExactTokens(uint256,uint256,address[],address,uint256)",
+          "swapExactETHForTokens(uint256,address[],address,uint256)",
+          "swapTokensForExactETH(uint256,uint256,address[],address,uint256)",
+          "swapExactTokensForETH(uint256,uint256,address[],address,uint256)",
+          "swapETHForExactTokens(uint256,address[],address,uint256)",
+          "quote(uint256,uint256,uint256)",
+          "getAmountOut(uint256,uint256,uint256)",
+          "getAmountIn(uint256,uint256,uint256)",
+          "getAmountsOut(uint256,address[])",
+          "getAmountsIn(uint256,address[])"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.6.2"
+      },
+      "contracts/IUniswapV2Router02.sol:IUniswapV2Router02": {
+        "src": "contracts/IUniswapV2Router02.sol:5",
+        "inherit": [
+          "contracts/IUniswapV2Router01.sol:IUniswapV2Router01"
+        ],
+        "libraries": [],
+        "methods": [
+          "removeLiquidityETHSupportingFeeOnTransferTokens(address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidityETHWithPermitSupportingFeeOnTransferTokens(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)",
+          "swapExactTokensForTokensSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)",
+          "swapExactETHForTokensSupportingFeeOnTransferTokens(uint256,address[],address,uint256)",
+          "swapExactTokensForETHSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.6.2"
+      },
+      "contracts/PriceEstimator.sol:PriceEstimator": {
+        "src": "contracts/PriceEstimator.sol:8",
+        "version": {
+          "withMetadata": "9dfa0be1402470bd288916355bb9606d2e325cb5d13b2c0fffa010a6040a1be4",
+          "withoutMetadata": "513a0fed51657c30175fd371220550e74c542dfa70f03cd96d6ad45a71f367ab",
+          "linkedWithoutMetadata": "513a0fed51657c30175fd371220550e74c542dfa70f03cd96d6ad45a71f367ab"
+        },
+        "inherit": [
+          "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol:OwnableUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:ContextUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:Initializable",
+          "contracts/IPriceEstimator.sol:IPriceEstimator"
+        ],
+        "libraries": [
+          "@openzeppelin/contracts-ethereum-package/contracts/utils/Address.sol:Address"
+        ],
+        "methods": [
+          "initialize(address)",
+          "setUniswapRouter(address)",
+          "getEstimatedETHforERC20(uint256,address)",
+          "getEstimatedERC20forETH(uint256,address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:21"
+            },
+            {
+              "label": "initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:26"
+            },
+            {
+              "label": "______gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:61"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:37"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_address",
+              "contract": "OwnableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol:18"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol:78"
+            },
+            {
+              "label": "uniswapRouter",
+              "offset": 0,
+              "slot": "151",
+              "type": "t_contract(IUniswapV2Router02)2830",
+              "contract": "PriceEstimator",
+              "src": "contracts/PriceEstimator.sol:13"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_contract(IUniswapV2Router02)2830": {
+              "label": "contract IUniswapV2Router02",
+              "numberOfBytes": "20"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.6.2"
+      },
+      "contracts/SmartSwap.sol:SmartSwap": {
+        "src": "contracts/SmartSwap.sol:10",
+        "version": {
+          "withMetadata": "d2e1bb8862978b4fa8be206695bb2f146bdaa3e6f0341ffd99b1af50b12070da",
+          "withoutMetadata": "34780a3ca6372ea6242195f72e1c11899260b551ed54454a4bf265f6a37fef02",
+          "linkedWithoutMetadata": "34780a3ca6372ea6242195f72e1c11899260b551ed54454a4bf265f6a37fef02"
+        },
+        "inherit": [
+          "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol:PausableUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol:OwnableUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:ContextUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:Initializable"
+        ],
+        "libraries": [
+          "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/SafeERC20.sol:SafeERC20",
+          "@openzeppelin/contracts-ethereum-package/contracts/math/SafeMath.sol:SafeMath",
+          "@openzeppelin/contracts-ethereum-package/contracts/utils/Address.sol:Address"
+        ],
+        "methods": [
+          "initialize(address,address payable,address,address)",
+          "pause()",
+          "unpause()",
+          "setSwapToken(address)",
+          "setFeeWallet(address payable)",
+          "setDevWallet(address payable)",
+          "setPriceEstimator(address)",
+          "setEthFeePercentage(uint8)",
+          "setAllowedFeeSlippagePercentage(uint8)",
+          "setUniswapFeePercentage(uint8)",
+          "getFeeInEthForEth(uint256)",
+          "getFeeInEthForERC20(uint256,address)",
+          "getFeeInEthForERC20UsingTotalSupply(uint256,address)",
+          "getFeeInSwapForETH(uint256)",
+          "getFeeInSwapForERC20(uint256,address,bool)",
+          "open(uint256,address,uint256,address payable,address,uint256,bool,bool)",
+          "close(uint256,uint256,bool,bool)",
+          "cancel(uint256)",
+          "check(uint256)",
+          "addTokenToFreeList(address)",
+          "removeTokenFromFreeList(address)",
+          "isFreeToken(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:21"
+            },
+            {
+              "label": "initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:26"
+            },
+            {
+              "label": "______gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:61"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:37"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_address",
+              "contract": "OwnableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol:18"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol:78"
+            },
+            {
+              "label": "_paused",
+              "offset": 0,
+              "slot": "151",
+              "type": "t_bool",
+              "contract": "PausableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol:26"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "152",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "PausableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol:84"
+            },
+            {
+              "label": "_swapId",
+              "offset": 0,
+              "slot": "201",
+              "type": "t_uint256",
+              "contract": "SmartSwap",
+              "src": "contracts/SmartSwap.sol:46"
+            },
+            {
+              "label": "_swaps",
+              "offset": 0,
+              "slot": "202",
+              "type": "t_mapping(t_uint256,t_struct(Swap)3081_storage)",
+              "contract": "SmartSwap",
+              "src": "contracts/SmartSwap.sol:48"
+            },
+            {
+              "label": "_swapToken",
+              "offset": 0,
+              "slot": "203",
+              "type": "t_contract(IERC20)1497",
+              "contract": "SmartSwap",
+              "src": "contracts/SmartSwap.sol:50"
+            },
+            {
+              "label": "_feesWallet",
+              "offset": 0,
+              "slot": "204",
+              "type": "t_address_payable",
+              "contract": "SmartSwap",
+              "src": "contracts/SmartSwap.sol:53"
+            },
+            {
+              "label": "_devWallet",
+              "offset": 0,
+              "slot": "205",
+              "type": "t_address",
+              "contract": "SmartSwap",
+              "src": "contracts/SmartSwap.sol:56"
+            },
+            {
+              "label": "_ethFeePercentage",
+              "offset": 0,
+              "slot": "206",
+              "type": "t_uint256",
+              "contract": "SmartSwap",
+              "src": "contracts/SmartSwap.sol:58"
+            },
+            {
+              "label": "_allowedFeeSlippagePercentage",
+              "offset": 0,
+              "slot": "207",
+              "type": "t_uint256",
+              "contract": "SmartSwap",
+              "src": "contracts/SmartSwap.sol:59"
+            },
+            {
+              "label": "_uniswapFeePercentage",
+              "offset": 0,
+              "slot": "208",
+              "type": "t_uint256",
+              "contract": "SmartSwap",
+              "src": "contracts/SmartSwap.sol:60"
+            },
+            {
+              "label": "_priceEstimator",
+              "offset": 0,
+              "slot": "209",
+              "type": "t_contract(IPriceEstimator)2434",
+              "contract": "SmartSwap",
+              "src": "contracts/SmartSwap.sol:62"
+            },
+            {
+              "label": "_listFreeTokens",
+              "offset": 0,
+              "slot": "210",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "SmartSwap",
+              "src": "contracts/SmartSwap.sol:65"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_address_payable": {
+              "label": "address payable",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_contract(IERC20)1497": {
+              "label": "contract IERC20",
+              "numberOfBytes": "20"
+            },
+            "t_contract(IPriceEstimator)2434": {
+              "label": "contract IPriceEstimator",
+              "numberOfBytes": "20"
+            },
+            "t_enum(Status)3060": {
+              "label": "enum SmartSwap.Status",
+              "members": [
+                "OPEN",
+                "CLOSED",
+                "CANCELLED"
+              ],
+              "numberOfBytes": "1"
+            },
+            "t_enum(SwapType)3064": {
+              "label": "enum SmartSwap.SwapType",
+              "members": [
+                "ETH_TO_ERC20",
+                "ERC20_TO_ETH",
+                "ERC20_TO_ERC20"
+              ],
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_struct(Swap)3081_storage)": {
+              "label": "mapping(uint256 => struct SmartSwap.Swap)",
+              "numberOfBytes": "32"
+            },
+            "t_struct(Swap)3081_storage": {
+              "label": "struct SmartSwap.Swap",
+              "members": [
+                {
+                  "label": "openValue",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "closeValue",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "openTrader",
+                  "type": "t_address_payable",
+                  "offset": 0,
+                  "slot": "2"
+                },
+                {
+                  "label": "closeTrader",
+                  "type": "t_address_payable",
+                  "offset": 0,
+                  "slot": "3"
+                },
+                {
+                  "label": "openContractAddress",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "4"
+                },
+                {
+                  "label": "closeContractAddress",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "5"
+                },
+                {
+                  "label": "swapType",
+                  "type": "t_enum(SwapType)3064",
+                  "offset": 20,
+                  "slot": "5"
+                },
+                {
+                  "label": "status",
+                  "type": "t_enum(Status)3060",
+                  "offset": 21,
+                  "slot": "5"
+                }
+              ],
+              "numberOfBytes": "192"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.6.2"
+      },
+      "contracts/SwapSmartLock.sol:SwapSmartLock": {
+        "src": "contracts/SwapSmartLock.sol:16",
+        "version": {
+          "withMetadata": "af0bdae033e69aff6f793a6f9875865819f359b7fe1155f27983979b86f3f93a",
+          "withoutMetadata": "57bfd7f6230aed225f6e91c399673827e3ba1e7ec3776dcd6d98bf3edcaed24e",
+          "linkedWithoutMetadata": "57bfd7f6230aed225f6e91c399673827e3ba1e7ec3776dcd6d98bf3edcaed24e"
+        },
+        "inherit": [
+          "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol:PausableUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol:OwnableUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:ContextUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:Initializable"
+        ],
+        "libraries": [
+          "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/SafeERC20.sol:SafeERC20",
+          "@openzeppelin/contracts-ethereum-package/contracts/math/SafeMath.sol:SafeMath",
+          "@openzeppelin/contracts-ethereum-package/contracts/utils/Address.sol:Address",
+          "@openzeppelin/contracts-ethereum-package/contracts/math/Math.sol:Math"
+        ],
+        "methods": [
+          "initialize(address,address payable,address,address)",
+          "getFeesWallet()",
+          "getDevWallet()",
+          "getSwapToken()",
+          "getPriceEstimator()",
+          "getPaymentDetails(uint256)",
+          "getBeneficiaryPaymentIds(address)",
+          "getSenderPaymentIds(address)",
+          "setSwapToken(address)",
+          "setFeeWallet(address payable)",
+          "setDevWallet(address payable)",
+          "setPriceEstimator(address)",
+          "setEthFeePercentage(uint8)",
+          "setAllowedFeeSlippagePercentage(uint8)",
+          "setUniswapFeePercentage(uint8)",
+          "setMaxFeeInEth(uint256)",
+          "getFeeInEthForEth(uint256)",
+          "getFeeInEthForERC20(uint256,address)",
+          "getFeeInEthForERC20UsingTotalSupply(uint256,address)",
+          "getFeeInSwapForETH(uint256)",
+          "getFeeInSwapForERC20(uint256,address,bool)",
+          "schedulePayment(address,uint256,uint256,address payable,uint256,bool,bool)",
+          "scheduleBulkPayment(address,uint256[],uint256[],address payable[],uint256[],bool,bool)",
+          "release(uint256)",
+          "releasable(uint256)",
+          "pause()",
+          "unpause()",
+          "addTokenToFreeList(address)",
+          "removeTokenFromFreeList(address)",
+          "isFreeToken(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:21"
+            },
+            {
+              "label": "initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:26"
+            },
+            {
+              "label": "______gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:61"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:37"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_address",
+              "contract": "OwnableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol:18"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol:78"
+            },
+            {
+              "label": "_paused",
+              "offset": 0,
+              "slot": "151",
+              "type": "t_bool",
+              "contract": "PausableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol:26"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "152",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "PausableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol:84"
+            },
+            {
+              "label": "_swapToken",
+              "offset": 0,
+              "slot": "201",
+              "type": "t_contract(IERC20)1497",
+              "contract": "SwapSmartLock",
+              "src": "contracts/SwapSmartLock.sol:23"
+            },
+            {
+              "label": "_feesWallet",
+              "offset": 0,
+              "slot": "202",
+              "type": "t_address_payable",
+              "contract": "SwapSmartLock",
+              "src": "contracts/SwapSmartLock.sol:26"
+            },
+            {
+              "label": "_devWallet",
+              "offset": 0,
+              "slot": "203",
+              "type": "t_address",
+              "contract": "SwapSmartLock",
+              "src": "contracts/SwapSmartLock.sol:29"
+            },
+            {
+              "label": "_paymentId",
+              "offset": 0,
+              "slot": "204",
+              "type": "t_uint256",
+              "contract": "SwapSmartLock",
+              "src": "contracts/SwapSmartLock.sol:49"
+            },
+            {
+              "label": "_beneficiaryVsPaymentIds",
+              "offset": 0,
+              "slot": "205",
+              "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)",
+              "contract": "SwapSmartLock",
+              "src": "contracts/SwapSmartLock.sol:52"
+            },
+            {
+              "label": "_senderVsPaymentIds",
+              "offset": 0,
+              "slot": "206",
+              "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)",
+              "contract": "SwapSmartLock",
+              "src": "contracts/SwapSmartLock.sol:55"
+            },
+            {
+              "label": "_idVsPayment",
+              "offset": 0,
+              "slot": "207",
+              "type": "t_mapping(t_uint256,t_struct(Payment)5344_storage)",
+              "contract": "SwapSmartLock",
+              "src": "contracts/SwapSmartLock.sol:57"
+            },
+            {
+              "label": "_priceEstimator",
+              "offset": 0,
+              "slot": "208",
+              "type": "t_contract(IPriceEstimator)2434",
+              "contract": "SwapSmartLock",
+              "src": "contracts/SwapSmartLock.sol:59"
+            },
+            {
+              "label": "_ethFeePercentage",
+              "offset": 0,
+              "slot": "209",
+              "type": "t_uint256",
+              "contract": "SwapSmartLock",
+              "src": "contracts/SwapSmartLock.sol:61"
+            },
+            {
+              "label": "_allowedFeeSlippagePercentage",
+              "offset": 0,
+              "slot": "210",
+              "type": "t_uint256",
+              "contract": "SwapSmartLock",
+              "src": "contracts/SwapSmartLock.sol:62"
+            },
+            {
+              "label": "_uniswapFeePercentage",
+              "offset": 0,
+              "slot": "211",
+              "type": "t_uint256",
+              "contract": "SwapSmartLock",
+              "src": "contracts/SwapSmartLock.sol:63"
+            },
+            {
+              "label": "_maxFeeInEth",
+              "offset": 0,
+              "slot": "212",
+              "type": "t_uint256",
+              "contract": "SwapSmartLock",
+              "src": "contracts/SwapSmartLock.sol:65"
+            },
+            {
+              "label": "_listFreeTokens",
+              "offset": 0,
+              "slot": "213",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "SwapSmartLock",
+              "src": "contracts/SwapSmartLock.sol:68"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_address_payable": {
+              "label": "address payable",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_array(t_uint256)dyn_storage": {
+              "label": "uint256[]",
+              "numberOfBytes": "32"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_contract(IERC20)1497": {
+              "label": "contract IERC20",
+              "numberOfBytes": "20"
+            },
+            "t_contract(IPriceEstimator)2434": {
+              "label": "contract IPriceEstimator",
+              "numberOfBytes": "20"
+            },
+            "t_enum(Status)5311": {
+              "label": "enum SwapSmartLock.Status",
+              "members": [
+                "CLOSED",
+                "OPEN"
+              ],
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+              "label": "mapping(address => uint256[])",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_uint256,t_struct(Payment)5344_storage)": {
+              "label": "mapping(uint256 => struct SwapSmartLock.Payment)",
+              "numberOfBytes": "32"
+            },
+            "t_struct(Payment)5344_storage": {
+              "label": "struct SwapSmartLock.Payment",
+              "members": [
+                {
+                  "label": "token",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "sender",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "beneficiary",
+                  "type": "t_address_payable",
+                  "offset": 0,
+                  "slot": "2"
+                },
+                {
+                  "label": "amount",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "3"
+                },
+                {
+                  "label": "releaseTime",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "4"
+                },
+                {
+                  "label": "createdAt",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "5"
+                },
+                {
+                  "label": "status",
+                  "type": "t_enum(Status)5311",
+                  "offset": 0,
+                  "slot": "6"
+                }
+              ],
+              "numberOfBytes": "224"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.6.2"
+      },
+      "contracts/SwapStakingContract.sol:SwapStakingContract": {
+        "src": "contracts/SwapStakingContract.sol:12",
+        "version": {
+          "withMetadata": "0463ac7343d80e98c16f76489d904eaea87b5cfda659a3211074492b4b100692",
+          "withoutMetadata": "4c54fde5fbb1476552ac99312dbcd1230f41aead9d31b176963cb6f4a50f9591",
+          "linkedWithoutMetadata": "4c54fde5fbb1476552ac99312dbcd1230f41aead9d31b176963cb6f4a50f9591"
+        },
+        "inherit": [
+          "@openzeppelin/contracts-ethereum-package/contracts/utils/ReentrancyGuard.sol:ReentrancyGuardUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol:PausableUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/access/AccessControl.sol:AccessControlUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:ContextUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:Initializable"
+        ],
+        "libraries": [
+          "@openzeppelin/contracts-ethereum-package/contracts/math/SafeMath.sol:SafeMath",
+          "@openzeppelin/contracts-ethereum-package/contracts/math/Math.sol:Math",
+          "@openzeppelin/contracts-ethereum-package/contracts/utils/Address.sol:Address",
+          "@openzeppelin/contracts-ethereum-package/contracts/utils/Arrays.sol:Arrays"
+        ],
+        "methods": [
+          "initialize(address,address,uint256,uint256)",
+          "pause()",
+          "unpause()",
+          "setRewardAddress(address)",
+          "setTokenAddress(address)",
+          "deposit(uint256)",
+          "initiateWithdrawal(uint256)",
+          "executeWithdrawal()",
+          "withdrawRewards()",
+          "getStakeDetails(address)",
+          "distributeRewards()",
+          "version()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:21"
+            },
+            {
+              "label": "initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:26"
+            },
+            {
+              "label": "______gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:61"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:37"
+            },
+            {
+              "label": "_roles",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_mapping(t_bytes32,t_struct(RoleData)153_storage)",
+              "contract": "AccessControlUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/access/AccessControl.sol:58"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "AccessControlUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/access/AccessControl.sol:210"
+            },
+            {
+              "label": "_paused",
+              "offset": 0,
+              "slot": "151",
+              "type": "t_bool",
+              "contract": "PausableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol:26"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "152",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "PausableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol:84"
+            },
+            {
+              "label": "_notEntered",
+              "offset": 0,
+              "slot": "201",
+              "type": "t_bool",
+              "contract": "ReentrancyGuardUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/utils/ReentrancyGuard.sol:21"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "202",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "ReentrancyGuardUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/utils/ReentrancyGuard.sol:63"
+            },
+            {
+              "label": "token",
+              "offset": 0,
+              "slot": "251",
+              "type": "t_contract(IERC20)1497",
+              "contract": "SwapStakingContract",
+              "src": "contracts/SwapStakingContract.sol:47"
+            },
+            {
+              "label": "rewardsAddress",
+              "offset": 0,
+              "slot": "252",
+              "type": "t_address",
+              "contract": "SwapStakingContract",
+              "src": "contracts/SwapStakingContract.sol:48"
+            },
+            {
+              "label": "maxStakingAmount",
+              "offset": 0,
+              "slot": "253",
+              "type": "t_uint256",
+              "contract": "SwapStakingContract",
+              "src": "contracts/SwapStakingContract.sol:49"
+            },
+            {
+              "label": "currentTotalStake",
+              "offset": 0,
+              "slot": "254",
+              "type": "t_uint256",
+              "contract": "SwapStakingContract",
+              "src": "contracts/SwapStakingContract.sol:50"
+            },
+            {
+              "label": "unstakingPeriod",
+              "offset": 0,
+              "slot": "255",
+              "type": "t_uint256",
+              "contract": "SwapStakingContract",
+              "src": "contracts/SwapStakingContract.sol:51"
+            },
+            {
+              "label": "totalRewardPoints",
+              "offset": 0,
+              "slot": "256",
+              "type": "t_uint256",
+              "contract": "SwapStakingContract",
+              "src": "contracts/SwapStakingContract.sol:54"
+            },
+            {
+              "label": "rewardsDistributed",
+              "offset": 0,
+              "slot": "257",
+              "type": "t_uint256",
+              "contract": "SwapStakingContract",
+              "src": "contracts/SwapStakingContract.sol:55"
+            },
+            {
+              "label": "rewardsWithdrawn",
+              "offset": 0,
+              "slot": "258",
+              "type": "t_uint256",
+              "contract": "SwapStakingContract",
+              "src": "contracts/SwapStakingContract.sol:56"
+            },
+            {
+              "label": "totalRewardsDistributed",
+              "offset": 0,
+              "slot": "259",
+              "type": "t_uint256",
+              "contract": "SwapStakingContract",
+              "src": "contracts/SwapStakingContract.sol:57"
+            },
+            {
+              "label": "_stakeDeposits",
+              "offset": 0,
+              "slot": "260",
+              "type": "t_mapping(t_address,t_struct(StakeDeposit)7063_storage)",
+              "contract": "SwapStakingContract",
+              "src": "contracts/SwapStakingContract.sol:59"
+            },
+            {
+              "label": "_withdrawStates",
+              "offset": 0,
+              "slot": "261",
+              "type": "t_mapping(t_address,t_struct(WithdrawalState)7068_storage)",
+              "contract": "SwapStakingContract",
+              "src": "contracts/SwapStakingContract.sol:60"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_bytes32)dyn_storage": {
+              "label": "bytes32[]",
+              "numberOfBytes": "32"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_contract(IERC20)1497": {
+              "label": "contract IERC20",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_address,t_struct(StakeDeposit)7063_storage)": {
+              "label": "mapping(address => struct SwapStakingContract.StakeDeposit)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_struct(WithdrawalState)7068_storage)": {
+              "label": "mapping(address => struct SwapStakingContract.WithdrawalState)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_struct(RoleData)153_storage)": {
+              "label": "mapping(bytes32 => struct AccessControlUpgradeSafe.RoleData)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_uint256)": {
+              "label": "mapping(bytes32 => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_struct(AddressSet)2052_storage": {
+              "label": "struct EnumerableSet.AddressSet",
+              "members": [
+                {
+                  "label": "_inner",
+                  "type": "t_struct(Set)1877_storage",
+                  "offset": 0,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(RoleData)153_storage": {
+              "label": "struct AccessControlUpgradeSafe.RoleData",
+              "members": [
+                {
+                  "label": "members",
+                  "type": "t_struct(AddressSet)2052_storage",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "adminRole",
+                  "type": "t_bytes32",
+                  "offset": 0,
+                  "slot": "2"
+                }
+              ],
+              "numberOfBytes": "96"
+            },
+            "t_struct(Set)1877_storage": {
+              "label": "struct EnumerableSet.Set",
+              "members": [
+                {
+                  "label": "_values",
+                  "type": "t_array(t_bytes32)dyn_storage",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_indexes",
+                  "type": "t_mapping(t_bytes32,t_uint256)",
+                  "offset": 0,
+                  "slot": "1"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(StakeDeposit)7063_storage": {
+              "label": "struct SwapStakingContract.StakeDeposit",
+              "members": [
+                {
+                  "label": "amount",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "startDate",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "endDate",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "2"
+                },
+                {
+                  "label": "entryRewardPoints",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "3"
+                },
+                {
+                  "label": "exitRewardPoints",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "4"
+                },
+                {
+                  "label": "exists",
+                  "type": "t_bool",
+                  "offset": 0,
+                  "slot": "5"
+                }
+              ],
+              "numberOfBytes": "192"
+            },
+            "t_struct(WithdrawalState)7068_storage": {
+              "label": "struct SwapStakingContract.WithdrawalState",
+              "members": [
+                {
+                  "label": "initiateDate",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "amount",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "1"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.6.2"
+      },
+      "contracts/SwapToken.sol:SwapToken": {
+        "src": "contracts/SwapToken.sol:21",
+        "version": {
+          "withMetadata": "5c89fc1275d5af8a9c7fc098494705ab957ba8f5e6b5af33427b149cd63949fa",
+          "withoutMetadata": "13e27173281cd05118b379ee91a3854c57fe1096aa119aafd180e4f0d09a66d9",
+          "linkedWithoutMetadata": "13e27173281cd05118b379ee91a3854c57fe1096aa119aafd180e4f0d09a66d9"
+        },
+        "inherit": [
+          "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Pausable.sol:ERC20PausableUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol:PausableUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Burnable.sol:ERC20BurnableUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:ERC20UpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/IERC20.sol:IERC20",
+          "@openzeppelin/contracts-ethereum-package/contracts/access/AccessControl.sol:AccessControlUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:ContextUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "initialize(string,string,uint8,uint256)",
+          "pause()",
+          "unpause()",
+          "withdrawTokens(address)",
+          "version()",
+          "isBlacklisted(address)",
+          "blacklist(address)",
+          "unBlacklist(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:21"
+            },
+            {
+              "label": "initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:26"
+            },
+            {
+              "label": "______gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:61"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:37"
+            },
+            {
+              "label": "_roles",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_mapping(t_bytes32,t_struct(RoleData)153_storage)",
+              "contract": "AccessControlUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/access/AccessControl.sol:58"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "AccessControlUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/access/AccessControl.sol:210"
+            },
+            {
+              "label": "_balances",
+              "offset": 0,
+              "slot": "151",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:37"
+            },
+            {
+              "label": "_allowances",
+              "offset": 0,
+              "slot": "152",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:39"
+            },
+            {
+              "label": "_totalSupply",
+              "offset": 0,
+              "slot": "153",
+              "type": "t_uint256",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:41"
+            },
+            {
+              "label": "_name",
+              "offset": 0,
+              "slot": "154",
+              "type": "t_string_storage",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:43"
+            },
+            {
+              "label": "_symbol",
+              "offset": 0,
+              "slot": "155",
+              "type": "t_string_storage",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:44"
+            },
+            {
+              "label": "_decimals",
+              "offset": 0,
+              "slot": "156",
+              "type": "t_uint8",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:45"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "157",
+              "type": "t_array(t_uint256)44_storage",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:317"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "201",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ERC20BurnableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Burnable.sol:50"
+            },
+            {
+              "label": "_paused",
+              "offset": 0,
+              "slot": "251",
+              "type": "t_bool",
+              "contract": "PausableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol:26"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "252",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "PausableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol:84"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "301",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ERC20PausableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Pausable.sol:39"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "351",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "SwapToken",
+              "src": "contracts/SwapToken.sol:108"
+            },
+            {
+              "label": "blacklisted",
+              "offset": 0,
+              "slot": "401",
+              "type": "t_mapping(t_address,t_bool)",
+              "contract": "SwapToken",
+              "src": "contracts/SwapToken.sol:111"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_bytes32)dyn_storage": {
+              "label": "bytes32[]",
+              "numberOfBytes": "32"
+            },
+            "t_array(t_uint256)44_storage": {
+              "label": "uint256[44]",
+              "numberOfBytes": "1408"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_bool)": {
+              "label": "mapping(address => bool)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_struct(RoleData)153_storage)": {
+              "label": "mapping(bytes32 => struct AccessControlUpgradeSafe.RoleData)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_uint256)": {
+              "label": "mapping(bytes32 => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_struct(AddressSet)2052_storage": {
+              "label": "struct EnumerableSet.AddressSet",
+              "members": [
+                {
+                  "label": "_inner",
+                  "type": "t_struct(Set)1877_storage",
+                  "offset": 0,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(RoleData)153_storage": {
+              "label": "struct AccessControlUpgradeSafe.RoleData",
+              "members": [
+                {
+                  "label": "members",
+                  "type": "t_struct(AddressSet)2052_storage",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "adminRole",
+                  "type": "t_bytes32",
+                  "offset": 0,
+                  "slot": "2"
+                }
+              ],
+              "numberOfBytes": "96"
+            },
+            "t_struct(Set)1877_storage": {
+              "label": "struct EnumerableSet.Set",
+              "members": [
+                {
+                  "label": "_values",
+                  "type": "t_array(t_bytes32)dyn_storage",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_indexes",
+                  "type": "t_mapping(t_bytes32,t_uint256)",
+                  "offset": 0,
+                  "slot": "1"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.6.2"
+      }
+    },
+    {
+      "contracts/IUniswapV2Router01.sol:IUniswapV2Router01": {
+        "src": "contracts/IUniswapV2Router01.sol:3",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "factory()",
+          "WPLS()",
+          "addLiquidity(address,address,uint256,uint256,uint256,uint256,address,uint256)",
+          "addLiquidityETH(address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidity(address,address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidityETH(address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidityWithPermit(address,address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)",
+          "removeLiquidityETHWithPermit(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)",
+          "swapExactTokensForTokens(uint256,uint256,address[],address,uint256)",
+          "swapTokensForExactTokens(uint256,uint256,address[],address,uint256)",
+          "swapExactETHForTokens(uint256,address[],address,uint256)",
+          "swapTokensForExactETH(uint256,uint256,address[],address,uint256)",
+          "swapExactTokensForETH(uint256,uint256,address[],address,uint256)",
+          "swapETHForExactTokens(uint256,address[],address,uint256)",
+          "quote(uint256,uint256,uint256)",
+          "getAmountOut(uint256,uint256,uint256)",
+          "getAmountIn(uint256,uint256,uint256)",
+          "getAmountsOut(uint256,address[])",
+          "getAmountsIn(uint256,address[])"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.9"
+      },
+      "contracts/IUniswapV2Router02.sol:IUniswapV2Router02": {
+        "src": "contracts/IUniswapV2Router02.sol:5",
+        "inherit": [
+          "contracts/IUniswapV2Router01.sol:IUniswapV2Router01"
+        ],
+        "libraries": [],
+        "methods": [
+          "removeLiquidityETHSupportingFeeOnTransferTokens(address,uint256,uint256,uint256,address,uint256)",
+          "removeLiquidityETHWithPermitSupportingFeeOnTransferTokens(address,uint256,uint256,uint256,address,uint256,bool,uint8,bytes32,bytes32)",
+          "swapExactTokensForTokensSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)",
+          "swapExactETHForTokensSupportingFeeOnTransferTokens(uint256,address[],address,uint256)",
+          "swapExactTokensForETHSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.8.9"
+      }
+    },
+    {
+      "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:ContextUpgradeSafe": {
+        "src": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:14",
+        "version": {
+          "withMetadata": "d7410d34a09f9e1d2b3428cee5a2c91cffac25c012992c3d9d141cb6a483d435",
+          "withoutMetadata": "ac0db523ddc3e330f735df7b3b0b24460531c71290a891170e840f8f67d5ff6b",
+          "linkedWithoutMetadata": "ac0db523ddc3e330f735df7b3b0b24460531c71290a891170e840f8f67d5ff6b"
+        },
+        "inherit": [
+          "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:21"
+            },
+            {
+              "label": "initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:26"
+            },
+            {
+              "label": "______gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:61"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:37"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.6.2"
+      },
+      "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:Initializable": {
+        "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:16",
+        "version": {
+          "withMetadata": "7180aa655bb2fd965e8a9dd173fc77ac35dd1050ca6310dd919c1b4a0d572423",
+          "withoutMetadata": "ac0db523ddc3e330f735df7b3b0b24460531c71290a891170e840f8f67d5ff6b",
+          "linkedWithoutMetadata": "ac0db523ddc3e330f735df7b3b0b24460531c71290a891170e840f8f67d5ff6b"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:21"
+            },
+            {
+              "label": "initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:26"
+            },
+            {
+              "label": "______gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:61"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.6.2"
+      },
+      "@openzeppelin/contracts-ethereum-package/contracts/access/AccessControl.sol:AccessControlUpgradeSafe": {
+        "src": "@openzeppelin/contracts-ethereum-package/contracts/access/AccessControl.sol:39",
+        "inherit": [
+          "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:ContextUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:Initializable"
+        ],
+        "libraries": [
+          "@openzeppelin/contracts-ethereum-package/contracts/utils/EnumerableSet.sol:EnumerableSet",
+          "@openzeppelin/contracts-ethereum-package/contracts/utils/Address.sol:Address"
+        ],
+        "methods": [
+          "hasRole(bytes32,address)",
+          "getRoleMemberCount(bytes32)",
+          "getRoleMember(bytes32,uint256)",
+          "getRoleAdmin(bytes32)",
+          "grantRole(bytes32,address)",
+          "revokeRole(bytes32,address)",
+          "renounceRole(bytes32,address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:21"
+            },
+            {
+              "label": "initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:26"
+            },
+            {
+              "label": "______gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:61"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:37"
+            },
+            {
+              "label": "_roles",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_mapping(t_bytes32,t_struct(RoleData)153_storage)",
+              "contract": "AccessControlUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/access/AccessControl.sol:58"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "AccessControlUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/access/AccessControl.sol:210"
+            }
+          ],
+          "types": {
+            "t_array(t_bytes32)dyn_storage": {
+              "label": "bytes32[]",
+              "numberOfBytes": "32"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_bytes32": {
+              "label": "bytes32",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_struct(RoleData)153_storage)": {
+              "label": "mapping(bytes32 => struct AccessControlUpgradeSafe.RoleData)",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes32,t_uint256)": {
+              "label": "mapping(bytes32 => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_struct(AddressSet)2052_storage": {
+              "label": "struct EnumerableSet.AddressSet",
+              "members": [
+                {
+                  "label": "_inner",
+                  "type": "t_struct(Set)1877_storage",
+                  "offset": 0,
+                  "slot": "0"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_struct(RoleData)153_storage": {
+              "label": "struct AccessControlUpgradeSafe.RoleData",
+              "members": [
+                {
+                  "label": "members",
+                  "type": "t_struct(AddressSet)2052_storage",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "adminRole",
+                  "type": "t_bytes32",
+                  "offset": 0,
+                  "slot": "2"
+                }
+              ],
+              "numberOfBytes": "96"
+            },
+            "t_struct(Set)1877_storage": {
+              "label": "struct EnumerableSet.Set",
+              "members": [
+                {
+                  "label": "_values",
+                  "type": "t_array(t_bytes32)dyn_storage",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "_indexes",
+                  "type": "t_mapping(t_bytes32,t_uint256)",
+                  "offset": 0,
+                  "slot": "1"
+                }
+              ],
+              "numberOfBytes": "64"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.6.2"
+      },
+      "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol:OwnableUpgradeSafe": {
+        "src": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol:17",
+        "version": {
+          "withMetadata": "ca733af11b94f724109fe4dcc6c3e3b5eb5720544d36daa85bf053138dc7e8cd",
+          "withoutMetadata": "fc533e2b5136b9a67a5b476cf3ee05c2914b5b0ca10d85a9559f90ba2d1e3dbb",
+          "linkedWithoutMetadata": "fc533e2b5136b9a67a5b476cf3ee05c2914b5b0ca10d85a9559f90ba2d1e3dbb"
+        },
+        "inherit": [
+          "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:ContextUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "owner()",
+          "renounceOwnership()",
+          "transferOwnership(address)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:21"
+            },
+            {
+              "label": "initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:26"
+            },
+            {
+              "label": "______gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:61"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:37"
+            },
+            {
+              "label": "_owner",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_address",
+              "contract": "OwnableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol:18"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "OwnableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol:78"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.6.2"
+      },
+      "@openzeppelin/contracts-ethereum-package/contracts/math/Math.sol:Math": {
+        "src": "@openzeppelin/contracts-ethereum-package/contracts/math/Math.sol:6",
+        "version": {
+          "withMetadata": "6d5ad0e19a1e64c91eff437cca23cc6050262c5b5fe40607a738453d0bd60fb8",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.6.2"
+      },
+      "@openzeppelin/contracts-ethereum-package/contracts/math/SafeMath.sol:SafeMath": {
+        "src": "@openzeppelin/contracts-ethereum-package/contracts/math/SafeMath.sol:16",
+        "version": {
+          "withMetadata": "98f011a32523773571370cecca504d57fc64aa5a89a9b1cc934b42bbf68be59a",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.6.2"
+      },
+      "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:ERC20UpgradeSafe": {
+        "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:33",
+        "version": {
+          "withMetadata": "daa0843473f4f5bf5af45f89e924579564786ed9e2004c47826300d88ace5e0b",
+          "withoutMetadata": "17a8952588ae6589679cabe427f5bf33cf43a524e5a29ca53694e5c240858dd2",
+          "linkedWithoutMetadata": "17a8952588ae6589679cabe427f5bf33cf43a524e5a29ca53694e5c240858dd2"
+        },
+        "inherit": [
+          "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/IERC20.sol:IERC20",
+          "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:ContextUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:Initializable"
+        ],
+        "libraries": [
+          "@openzeppelin/contracts-ethereum-package/contracts/math/SafeMath.sol:SafeMath",
+          "@openzeppelin/contracts-ethereum-package/contracts/utils/Address.sol:Address"
+        ],
+        "methods": [
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "increaseAllowance(address,uint256)",
+          "decreaseAllowance(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:21"
+            },
+            {
+              "label": "initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:26"
+            },
+            {
+              "label": "______gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:61"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:37"
+            },
+            {
+              "label": "_balances",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:37"
+            },
+            {
+              "label": "_allowances",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:39"
+            },
+            {
+              "label": "_totalSupply",
+              "offset": 0,
+              "slot": "103",
+              "type": "t_uint256",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:41"
+            },
+            {
+              "label": "_name",
+              "offset": 0,
+              "slot": "104",
+              "type": "t_string_storage",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:43"
+            },
+            {
+              "label": "_symbol",
+              "offset": 0,
+              "slot": "105",
+              "type": "t_string_storage",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:44"
+            },
+            {
+              "label": "_decimals",
+              "offset": 0,
+              "slot": "106",
+              "type": "t_uint8",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:45"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "107",
+              "type": "t_array(t_uint256)44_storage",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:317"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)44_storage": {
+              "label": "uint256[44]",
+              "numberOfBytes": "1408"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.6.2"
+      },
+      "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Burnable.sol:ERC20BurnableUpgradeSafe": {
+        "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Burnable.sol:12",
+        "inherit": [
+          "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:ERC20UpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/IERC20.sol:IERC20",
+          "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:ContextUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "burn(uint256)",
+          "burnFrom(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:21"
+            },
+            {
+              "label": "initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:26"
+            },
+            {
+              "label": "______gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:61"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:37"
+            },
+            {
+              "label": "_balances",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:37"
+            },
+            {
+              "label": "_allowances",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:39"
+            },
+            {
+              "label": "_totalSupply",
+              "offset": 0,
+              "slot": "103",
+              "type": "t_uint256",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:41"
+            },
+            {
+              "label": "_name",
+              "offset": 0,
+              "slot": "104",
+              "type": "t_string_storage",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:43"
+            },
+            {
+              "label": "_symbol",
+              "offset": 0,
+              "slot": "105",
+              "type": "t_string_storage",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:44"
+            },
+            {
+              "label": "_decimals",
+              "offset": 0,
+              "slot": "106",
+              "type": "t_uint8",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:45"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "107",
+              "type": "t_array(t_uint256)44_storage",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:317"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "151",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ERC20BurnableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Burnable.sol:50"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)44_storage": {
+              "label": "uint256[44]",
+              "numberOfBytes": "1408"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.6.2"
+      },
+      "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Pausable.sol:ERC20PausableUpgradeSafe": {
+        "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Pausable.sol:14",
+        "inherit": [
+          "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol:PausableUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:ERC20UpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/IERC20.sol:IERC20",
+          "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:ContextUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:21"
+            },
+            {
+              "label": "initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:26"
+            },
+            {
+              "label": "______gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:61"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:37"
+            },
+            {
+              "label": "_balances",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:37"
+            },
+            {
+              "label": "_allowances",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:39"
+            },
+            {
+              "label": "_totalSupply",
+              "offset": 0,
+              "slot": "103",
+              "type": "t_uint256",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:41"
+            },
+            {
+              "label": "_name",
+              "offset": 0,
+              "slot": "104",
+              "type": "t_string_storage",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:43"
+            },
+            {
+              "label": "_symbol",
+              "offset": 0,
+              "slot": "105",
+              "type": "t_string_storage",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:44"
+            },
+            {
+              "label": "_decimals",
+              "offset": 0,
+              "slot": "106",
+              "type": "t_uint8",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:45"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "107",
+              "type": "t_array(t_uint256)44_storage",
+              "contract": "ERC20UpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20.sol:317"
+            },
+            {
+              "label": "_paused",
+              "offset": 0,
+              "slot": "151",
+              "type": "t_bool",
+              "contract": "PausableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol:26"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "152",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "PausableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol:84"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "201",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ERC20PausableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Pausable.sol:39"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_uint256)44_storage": {
+              "label": "uint256[44]",
+              "numberOfBytes": "1408"
+            },
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.6.2"
+      },
+      "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/IERC20.sol:IERC20": {
+        "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/IERC20.sol:6",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.6.2"
+      },
+      "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/SafeERC20.sol:SafeERC20": {
+        "src": "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/SafeERC20.sol:16",
+        "version": {
+          "withMetadata": "3342855e4714af8763855af3e6a78f5f20a9570a97d989e3d97fcffd97773df3",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [
+          "@openzeppelin/contracts-ethereum-package/contracts/math/SafeMath.sol:SafeMath",
+          "@openzeppelin/contracts-ethereum-package/contracts/utils/Address.sol:Address"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.6.2"
+      },
+      "@openzeppelin/contracts-ethereum-package/contracts/utils/Address.sol:Address": {
+        "src": "@openzeppelin/contracts-ethereum-package/contracts/utils/Address.sol:6",
+        "version": {
+          "withMetadata": "0b212808b3d7e3add5892e590184cd859480e7e81afd6e58a7490d5a399f7496",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.6.2"
+      },
+      "@openzeppelin/contracts-ethereum-package/contracts/utils/Arrays.sol:Arrays": {
+        "src": "@openzeppelin/contracts-ethereum-package/contracts/utils/Arrays.sol:8",
+        "version": {
+          "withMetadata": "939891a780073b6465f8eb1dd359be0171e250da00da4fc54d975faef66a857b",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [
+          "@openzeppelin/contracts-ethereum-package/contracts/math/Math.sol:Math"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.6.2"
+      },
+      "@openzeppelin/contracts-ethereum-package/contracts/utils/EnumerableSet.sol:EnumerableSet": {
+        "src": "@openzeppelin/contracts-ethereum-package/contracts/utils/EnumerableSet.sol:27",
+        "version": {
+          "withMetadata": "c9f2e6a6326624d155da41fd77bfa8ea10f8de9c5e28cbcba6ab61a8a5a77e4b",
+          "withoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8",
+          "linkedWithoutMetadata": "aaa148c474cd10e1a6cd0a52c0b55f1aa9b7bb7b42d7f1cb5acaea4f42f04bc8"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false
+        },
+        "solcVersion": "0.6.2"
+      },
+      "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol:PausableUpgradeSafe": {
+        "src": "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol:15",
+        "version": {
+          "withMetadata": "237dac1512e7d48027b4f74c138934de639db9cbe8b6fca3a048361a36d610f1",
+          "withoutMetadata": "a3875217e0fc28e1a470f0c610d353a5b4f4efd6107d0c0e16abe919c031a507",
+          "linkedWithoutMetadata": "a3875217e0fc28e1a470f0c610d353a5b4f4efd6107d0c0e16abe919c031a507"
+        },
+        "inherit": [
+          "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:ContextUpgradeSafe",
+          "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "paused()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:21"
+            },
+            {
+              "label": "initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:26"
+            },
+            {
+              "label": "______gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:61"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "ContextUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:37"
+            },
+            {
+              "label": "_paused",
+              "offset": 0,
+              "slot": "101",
+              "type": "t_bool",
+              "contract": "PausableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol:26"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "102",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "PausableUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/utils/Pausable.sol:84"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.6.2"
+      },
+      "@openzeppelin/contracts-ethereum-package/contracts/utils/ReentrancyGuard.sol:ReentrancyGuardUpgradeSafe": {
+        "src": "@openzeppelin/contracts-ethereum-package/contracts/utils/ReentrancyGuard.sol:20",
+        "version": {
+          "withMetadata": "deb523596be802816d3128f4098c445e1e268738cfc8d349f0c693a8a6119604",
+          "withoutMetadata": "ac0db523ddc3e330f735df7b3b0b24460531c71290a891170e840f8f67d5ff6b",
+          "linkedWithoutMetadata": "ac0db523ddc3e330f735df7b3b0b24460531c71290a891170e840f8f67d5ff6b"
+        },
+        "inherit": [
+          "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:21"
+            },
+            {
+              "label": "initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:26"
+            },
+            {
+              "label": "______gap",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_array(t_uint256)50_storage",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:61"
+            },
+            {
+              "label": "_notEntered",
+              "offset": 0,
+              "slot": "51",
+              "type": "t_bool",
+              "contract": "ReentrancyGuardUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/utils/ReentrancyGuard.sol:21"
+            },
+            {
+              "label": "__gap",
+              "offset": 0,
+              "slot": "52",
+              "type": "t_array(t_uint256)49_storage",
+              "contract": "ReentrancyGuardUpgradeSafe",
+              "src": "@openzeppelin/contracts-ethereum-package/contracts/utils/ReentrancyGuard.sol:63"
+            }
+          ],
+          "types": {
+            "t_array(t_uint256)49_storage": {
+              "label": "uint256[49]",
+              "numberOfBytes": "1568"
+            },
+            "t_array(t_uint256)50_storage": {
+              "label": "uint256[50]",
+              "numberOfBytes": "1600"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true
+        },
+        "solcVersion": "0.6.2"
+      },
       "@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router01.sol:IUniswapV2Router01": {
         "src": "@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router01.sol:3",
         "inherit": [],
