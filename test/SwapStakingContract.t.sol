@@ -3,8 +3,8 @@ pragma solidity 0.6.2;
 pragma experimental ABIEncoderV2;
 
 import {Test, console} from "forge-std/Test.sol";
-import {SwapStakingContract} from "../contracts/SwapStakingContract.sol";
-import {MockERC20} from "./MockERC20.sol";
+import {SwapStakingContract} from "../src/SwapStakingContract.sol";
+import {ERC20Mock} from "openzeppelin-contracts/contracts/mocks/ERC20Mock.sol";
 import {ProxyAdmin} from "openzeppelin-contracts/contracts/proxy/ProxyAdmin.sol";
 import {TransparentUpgradeableProxy} from "openzeppelin-contracts/contracts/proxy/TransparentUpgradeableProxy.sol";
 
@@ -15,8 +15,8 @@ contract SwapStakingContractTest is Test {
     uint256 bscFork;
 
     address upgradedImplementationAddress;
-    MockERC20 swap;
-    MockERC20 newSwapToken;
+    ERC20Mock swap;
+    ERC20Mock newSwapToken;
     SwapStakingContract ltsp;  
     SwapStakingContract ltspUpgrade;        
 
@@ -38,21 +38,26 @@ contract SwapStakingContractTest is Test {
         bscFork = vm.createFork("https://bsc-dataseed.binance.org/");
         ltsp = SwapStakingContract(LTSP_PROXY);
         vm.selectFork(bscFork);
-        newSwapToken = new MockERC20("NEWSWAP", "NEWSWAP", 18, UINT256_MAX);
+        newSwapToken = new ERC20Mock("NEWSWAP", "NEWSWAP", LTSP_PROXY_ADMIN, UINT256_MAX / 2);
         ltspUpgrade = new SwapStakingContract();
         upgradedImplementationAddress = address(ltspUpgrade);
         address result = proxyManager.getProxyImplementation(proxy);
         console.log("result", result);
 
 
-        swap = MockERC20(SWAP_BSC);
+        swap = ERC20Mock(SWAP_BSC);
     }
 
-    function test_1() public {
+    function test_migrateWorks() public {
+        vm.selectFork(bscFork);
+
         vm.startPrank(LTSP_PROXY_ADMIN);
-        bytes memory upgradeCallData = "0x99a88ec40000000000000000000000001714fbcfb62a4974c83eafa0faec12191da6c71e0000000000000000000000002e234dae75c793f67a35089c9d99245e1c58470b";
-        (bool success, bytes memory returnData) = address(LTSP_PROXY_ADMIN_MANAGER).call(upgradeCallData);
-        console.log(success);
+        proxyManager.upgrade(proxy, upgradedImplementationAddress);
+        uint256 oldBalance = swap.balanceOf(LTSP_PROXY);
+        newSwapToken.approve(LTSP_PROXY, UINT256_MAX);
+        ltsp.migrateSwap(address(newSwapToken), LTSP_PROXY_ADMIN);
+        uint256 newBalance = newSwapToken.balanceOf(LTSP_PROXY);
+        assertEq(oldBalance, newBalance);
 
     }
 
