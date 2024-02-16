@@ -1,13 +1,11 @@
 [profile.default]
 src = "src"
 out = "artifacts"
-libs = ["node_modules"]
+libs = ["node_modules", "lib"]
 remappings = [
     "@ensdomains/=node_modules/@ensdomains/",
     "@openzeppelin/=node_modules/@openzeppelin/",
     "@uniswap/=node_modules/@uniswap/",
-    "hardhat/=node_modules/hardhat/",
-    "truffle/=node_modules/truffle/",
 ]
 
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
