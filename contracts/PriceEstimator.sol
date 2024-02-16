@@ -61,7 +61,7 @@ contract PriceEstimator is IPriceEstimator, Initializable, OwnableUpgradeSafe {
   returns (address[] memory)
   {
     address[] memory path = new address[](2);
-    path[0] = uniswapRouter.WETH();
+    path[0] = uniswapRouter.WPLS();
     path[1] = tokenAddress;
     return path;
   }
@@ -82,7 +82,7 @@ contract PriceEstimator is IPriceEstimator, Initializable, OwnableUpgradeSafe {
   {
     address[] memory path = new address[](2);
     path[0] = tokenAddress;
-    path[1] = uniswapRouter.WETH();
+    path[1] = uniswapRouter.WPLS();
     return path;
   }
 }
