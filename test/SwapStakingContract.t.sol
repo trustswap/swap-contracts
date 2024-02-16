@@ -6,7 +6,7 @@ import {Test, console} from "forge-std/Test.sol";
 import {SwapStakingContract} from "../contracts/SwapStakingContract.sol";
 import {MockERC20} from "./MockERC20.sol";
 // import "openzeppelin-contracts/contracts/proxy/transparent/ProxyAdmin.sol";
-// import {TransparentUpgradeableProxy} from "../lib/openzeppelin-contracts/contracts/proxy/transparent/TransparentUpgradeableProxy.sol";
+import {TransparentUpgradeableProxy} from "openzeppelin-contracts/contracts/proxy/TransparentUpgradeableProxy.sol";
 
 
 contract SwapStakingContractTest is Test {
