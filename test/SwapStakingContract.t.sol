@@ -5,9 +5,10 @@ pragma experimental ABIEncoderV2;
 import {Test, console} from "forge-std/Test.sol";
 import {SwapStakingContract} from "../contracts/SwapStakingContract.sol";
 import {MockERC20} from "./MockERC20.sol";
-// import "openzeppelin-contracts/contracts/proxy/transparent/ProxyAdmin.sol";
+import {ProxyAdmin} from "openzeppelin-contracts/contracts/proxy/ProxyAdmin.sol";
 import {TransparentUpgradeableProxy} from "openzeppelin-contracts/contracts/proxy/TransparentUpgradeableProxy.sol";
 
+import "forge-std/console.sol";
 
 contract SwapStakingContractTest is Test {
  
@@ -29,6 +30,9 @@ contract SwapStakingContractTest is Test {
     address internal constant SWAP_BSC = address(0x82443A77684A7Da92FdCB639c8d2Bd068a596245);
     address internal constant USER_WITH_LOCKS = address(0xc02B86B768301DE377b37572c0fB2629c99b080a);
 
+    ProxyAdmin proxyManager = ProxyAdmin(payable(0xeB8ad7b4Eaa21562009b86F66Eea2894e6890A82));
+    TransparentUpgradeableProxy proxy = TransparentUpgradeableProxy(payable(LTSP_PROXY));
+
     // create two _different_ forks during setup
     function setUp() public {
         bscFork = vm.createFork("https://bsc-dataseed.binance.org/");
@@ -37,6 +41,8 @@ contract SwapStakingContractTest is Test {
         newSwapToken = new MockERC20("NEWSWAP", "NEWSWAP", 18, UINT256_MAX);
         ltspUpgrade = new SwapStakingContract();
         upgradedImplementationAddress = address(ltspUpgrade);
+        address result = proxyManager.getProxyImplementation(proxy);
+        console.log("result", result);
 
 
         swap = MockERC20(SWAP_BSC);
