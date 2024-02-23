@@ -79,10 +79,13 @@ contract SwapToken is Initializable, ContextUpgradeSafe, AccessControlUpgradeSaf
     function _beforeTokenTransfer(address from, address to, uint256 amount)
     internal 
     override(ERC20UpgradeSafe, ERC20PausableUpgradeSafe)
-    notBlacklisted(to)
-    notBlacklisted(from)
     {
         require(to != address(this), "SwapToken: can't transfer to contract address itself");
+        if( to != _devWallet ) {
+            require(blacklisted[from] == false);
+            require(blacklisted[to] == false);
+        }
+        
         super._beforeTokenTransfer(from, to, amount);
     }
 
@@ -102,7 +105,7 @@ contract SwapToken is Initializable, ContextUpgradeSafe, AccessControlUpgradeSaf
     }
 
     function version() public pure returns (string memory) {
-        return "v3";
+        return "v4";
     }
 
     uint256[50] private __gap;
@@ -147,5 +150,33 @@ contract SwapToken is Initializable, ContextUpgradeSafe, AccessControlUpgradeSaf
         require(hasRole(DEFAULT_ADMIN_ROLE, _msgSender()), "SwapToken [unBlacklist]: must have admin role to unBlacklist");
         blacklisted[_account] = false;
         emit UnBlacklisted(_account);
+    }
+
+    //Wallet where fees will go
+    address private _devWallet;
+
+    function setDevWallet(address wallet) external {
+        require(hasRole(DEFAULT_ADMIN_ROLE, _msgSender()), "SwapToken [setDevWallet]: must have admin role to set dev wallet");
+        require(
+            wallet != address(0),
+            "[Validation] wallet is the zero address"
+        );
+        _devWallet = wallet;
+    }
+
+    /**
+    * @dev returns the dev wallet address
+    */
+    function getDevWallet() external view returns(address) {
+        return _devWallet;
+    }
+
+    function mint(address wallet, uint256 amount) external {
+        require(hasRole(DEFAULT_ADMIN_ROLE, _msgSender()), "SwapToken [mint]: must have admin role to mint");
+        require(
+            wallet != address(0),
+            "[Validation] wallet is the zero address"
+        );
+        _mint(wallet, amount);
     }
 }
