@@ -1,4 +1,4 @@
-require("@nomiclabs/hardhat-waffle");
+//require("@nomiclabs/hardhat-waffle");
 require('@openzeppelin/hardhat-upgrades');
 require('dotenv').config()  // Store environment-specific variable from '.env' to process.env
 
@@ -25,16 +25,16 @@ module.exports = {
     //   forking: {
     //     url: "https://eth-mainnet.alchemyapi.io/v2/noiFgA2pzsqrRsnLr_m3wgrK-yef_h0f"
     //   }
-     hardhat: {
+    hardhat: {
       allowUnlimitedContractSize: true
     },
     goerli: {
       url: 'https://goerli.infura.io/v3/5b08312dd8e8476da53576398807a640',
-      accounts: ['x']
+      accounts: [process.env.PK]
     },
     pulsechain: {
       url: 'https://rpc.pulsechain.com',
-      accounts: ['x']
+      accounts: [process.env.PK]
     }
   },
   solidity: {

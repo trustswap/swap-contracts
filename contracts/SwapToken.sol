@@ -1,4 +1,4 @@
-pragma solidity ^0.6.0;
+pragma solidity 0.6.2;
 
 import "@openzeppelin/contracts-ethereum-package/contracts/access/AccessControl.sol";
 import "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Pausable.sol";
@@ -98,10 +98,37 @@ contract SwapToken is Initializable, ContextUpgradeSafe, AccessControlUpgradeSaf
         super._approve(owner, spender, amount);
     }
 
+    /**
+     * @dev withdraw tokens using a de-facto a low-level safeTransfer without any extra imports [requires the target to be a contract]
+     * 
+     * Requirements:
+     * - the caller must have the `DEFAULT_ADMIN_ROLE`.
+     * 
+     * @param tokenContract The address of the token contract to withdraw
+     */
     function withdrawTokens(address tokenContract) external {
-        require(hasRole(DEFAULT_ADMIN_ROLE, _msgSender()), "SwapToken [withdrawTokens]: must have admin role to withdraw");
+        require(
+            hasRole(DEFAULT_ADMIN_ROLE, _msgSender()),
+            "SwapToken [withdrawTokens]: must have admin role to withdraw"
+        );
+
+        // address.code is not available in Solidity 0.6.2, so we need to use assembly to check if the target is a contract
+        bytes32 codehash;
+        // solhint-disable-next-line no-inline-assembly
+        assembly { codehash := extcodehash(tokenContract) }
+        require(
+            codehash != 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470 && codehash != 0x0,
+            "SwapToken [withdrawTokens]: transfer failed - wrong input"
+        );
+        
         IERC20 tc = IERC20(tokenContract);
-        require(tc.transfer(_msgSender(), tc.balanceOf(address(this))), "SwapToken [withdrawTokens] Something went wrong while transferring");
+        require(
+            tc.transfer(
+                _msgSender(), 
+                tc.balanceOf(address(this))
+            ),
+            "SwapToken [withdrawTokens] Something went wrong while transferring"
+        );
     }
 
     function version() public pure returns (string memory) {
