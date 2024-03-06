@@ -89,6 +89,14 @@ contract SwapToken is Initializable, ContextUpgradeSafe, AccessControlUpgradeSaf
         super._beforeTokenTransfer(from, to, amount);
     }
 
+    function _approve(address owner, address spender, uint256 amount)
+    internal 
+    override(ERC20UpgradeSafe)
+    notBlacklisted(owner)
+    notBlacklisted(spender)
+    {
+        super._approve(owner, spender, amount);
+    }
 
     function withdrawTokens(address tokenContract) external {
         require(hasRole(DEFAULT_ADMIN_ROLE, _msgSender()), "SwapToken [withdrawTokens]: must have admin role to withdraw");
@@ -100,11 +108,21 @@ contract SwapToken is Initializable, ContextUpgradeSafe, AccessControlUpgradeSaf
         return "v4";
     }
 
+    uint256[50] private __gap;
+
     //BlackListing
     mapping(address => bool) internal blacklisted;
     event Blacklisted(address indexed _account);
     event UnBlacklisted(address indexed _account);
 
+    /**
+     * @dev Throws if argument account is blacklisted
+     * @param _account The address to check
+    */
+    modifier notBlacklisted(address _account) {
+        require(blacklisted[_account] == false);
+        _;
+    }
 
     /**
      * @dev Checks if account is blacklisted
@@ -135,7 +153,7 @@ contract SwapToken is Initializable, ContextUpgradeSafe, AccessControlUpgradeSaf
     }
 
     //Wallet where fees will go
-    address public _devWallet;
+    address private _devWallet;
 
     function setDevWallet(address wallet) external {
         require(hasRole(DEFAULT_ADMIN_ROLE, _msgSender()), "SwapToken [setDevWallet]: must have admin role to set dev wallet");
