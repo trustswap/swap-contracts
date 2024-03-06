@@ -93,12 +93,14 @@ contract SwapToken is Initializable, ContextUpgradeSafe, AccessControlUpgradeSaf
     function withdrawTokens(address tokenContract) external {
         require(hasRole(DEFAULT_ADMIN_ROLE, _msgSender()), "SwapToken [withdrawTokens]: must have admin role to withdraw");
         IERC20 tc = IERC20(tokenContract);
-        require(tc.transfer(_msgSender(), tc.balanceOf(address(this))), "SwapToken [withdrawTokens] Something went wrong while transferring");
+        require(tc.safeTransfer(_msgSender(), tc.balanceOf(address(this))), "SwapToken [withdrawTokens] Something went wrong while transferring");
     }
 
     function version() public pure returns (string memory) {
         return "v4";
     }
+
+    uint256[50] private __gap;
 
     //BlackListing
     mapping(address => bool) internal blacklisted;
