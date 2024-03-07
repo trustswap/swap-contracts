@@ -3,6 +3,7 @@ pragma solidity ^0.6.0;
 import "@openzeppelin/contracts-ethereum-package/contracts/access/AccessControl.sol";
 import "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Pausable.sol";
 import "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Burnable.sol";
+import "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/SafeERC20.sol";
 
 /**
  * @dev {ERC20} token, including:
@@ -20,6 +21,8 @@ import "@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/ERC20Burn
  */
 contract SwapToken is Initializable, ContextUpgradeSafe, AccessControlUpgradeSafe, ERC20BurnableUpgradeSafe, ERC20PausableUpgradeSafe {
     bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
+
+    using SafeERC20 for IERC20;
 
     /**
      * @dev Grants `DEFAULT_ADMIN_ROLE` and `PAUSER_ROLE` to the
@@ -93,7 +96,7 @@ contract SwapToken is Initializable, ContextUpgradeSafe, AccessControlUpgradeSaf
     function withdrawTokens(address tokenContract) external {
         require(hasRole(DEFAULT_ADMIN_ROLE, _msgSender()), "SwapToken [withdrawTokens]: must have admin role to withdraw");
         IERC20 tc = IERC20(tokenContract);
-        require(tc.safeTransfer(_msgSender(), tc.balanceOf(address(this))), "SwapToken [withdrawTokens] Something went wrong while transferring");
+        tc.safeTransfer(_msgSender(), tc.balanceOf(address(this)));    
     }
 
     function version() public pure returns (string memory) {
