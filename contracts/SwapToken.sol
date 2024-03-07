@@ -121,12 +121,13 @@ contract SwapToken is Initializable, ContextUpgradeSafe, AccessControlUpgradeSaf
             "SwapToken [withdrawTokens]: transfer failed - wrong input"
         );
         
-        IERC20 tc = IERC20(tokenContract);
+        // use low-level call to transfer tokens (no boolean return value needed)
+        (bool success,) = tokenContract.call(abi.encodeWithSignature(
+            "transfer(address,uint256)", 
+            _msgSender(), 
+            IERC20(tokenContract).balanceOf(address(this))));
         require(
-            tc.transfer(
-                _msgSender(), 
-                tc.balanceOf(address(this))
-            ),
+            success,
             "SwapToken [withdrawTokens] Something went wrong while transferring"
         );
     }
